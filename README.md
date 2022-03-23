@@ -19,10 +19,8 @@ We have implemented a web-based database hosting the genoimc datsets and provide
 
 # Contacts
 
-Qinghui Yu (yuqinghui@xaas.ac.cn)
-
-Hongbo Li (lihongbo_solab@163.com)
-
 Ning Li (lining@xaas.ac.cn)
 
 Qiang He (qiangh@163.com)
+
+Hongbo Li (lihongbo_solab@163.com)
