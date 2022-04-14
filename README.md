@@ -4,7 +4,7 @@ Here, we sequence and de novo assemble chromosome-scale genomes of nine wild spe
 # Contents
 
 - Genome assembly
-- Genoem annotation
+- Genome annotation
 - Pan-genome
 - Phylogenetic analyses
 - Structural variation
