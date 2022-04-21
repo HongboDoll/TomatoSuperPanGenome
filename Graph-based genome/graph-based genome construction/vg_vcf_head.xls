@@ -1,0 +1,25 @@
+##fileformat=VCFv4.1
+##FILTER=<ID=PASS,Description="All filters passed">
+##fileDate=20200521
+##reference=ZY56.fa
+##source=WildTomatoPangenome
+##contig=<ID=Sly01,assembly=ZY56,length=96300770>
+##contig=<ID=Sly02,assembly=ZY56,length=55846282>
+##contig=<ID=Sly03,assembly=ZY56,length=66310657>
+##contig=<ID=Sly04,assembly=ZY56,length=65855162>
+##contig=<ID=Sly05,assembly=ZY56,length=68115988>
+##contig=<ID=Sly06,assembly=ZY56,length=51803804>
+##contig=<ID=Sly07,assembly=ZY56,length=70293382>
+##contig=<ID=Sly08,assembly=ZY56,length=65579656>
+##contig=<ID=Sly09,assembly=ZY56,length=71530607>
+##contig=<ID=Sly10,assembly=ZY56,length=68042402>
+##contig=<ID=Sly11,assembly=ZY56,length=54593675>
+##contig=<ID=Sly12,assembly=ZY56,length=67629715>
+##ALT=<ID=CNV,Description="Copy Number Polymorphism">
+##ALT=<ID=DEL,Description="Deletion">
+##ALT=<ID=DUP,Description="Duplication">
+##ALT=<ID=INS,Description="Insertion">
+##ALT=<ID=INV,Description="Inversion">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total read depth; only low coverage data were counted towards the DP, exome data were not used">
+##INFO=<ID=VT,Number=.,Type=String,Description="indicates what type of variant the line represents"
+##CHROM POS ID REF ALT QUAL FILTER INFO

@@ -1,0 +1,1199 @@
+<?xml version="1.0"?>
+
+<moduleArgs>
+    <version>
+      <flag attr="$Id: optArguments_nonhaplotype_noES_noCut_BG_saphyr.xml 10291 2019-11-15 23:05:50Z tanantharaman $"/>
+    </version>
+    <largeNodeBigMem>
+        <flag attr="-maxmem"     val0="248"/>
+	<flag attr="-maxvirtmem" val0="0"/>
+    </largeNodeBigMem>    
+    <largeNodeMem2>
+        <flag attr="-maxmem"     val0="248"/>
+	<flag attr="-maxvirtmem" val0="0"/>
+    </largeNodeMem2>    
+    <largeNodeMem>
+        <flag attr="-maxmem"     val0="120"/>
+	<flag attr="-maxvirtmem" val0="0"/>
+    </largeNodeMem>    
+    <tinyNodeMem>
+        <flag attr="-maxmem"     val0="7.2"/>
+    </tinyNodeMem>    
+    <splitNodeMem>
+        <flag attr="-maxmem"     val0="5.4"/>
+    </splitNodeMem>    
+    <bnx_sort> 
+        <flag attr="-minlen"      val0="130" display="Molecule Length Threshold (Kb)" tab="MQR:ASSEMBLE" group="BNX Sort" default0="150" description="Minimum length of molecules (kb) that are used in BNX sort"/>
+        <flag attr="-minsites"    val0="9" display="Min Labels per molecule" tab="MQR:ASSEMBLE" group="BNX Sort" default0="8" description="Minimum number of label sites per molecule to use."/>
+        <!--< <flag attr="-MaxIntensity" val0="0.6" display="Maximum backbone intensity" tab="MQR:ASSEMBLE" group="BNX Sort" default0="0.6" description="Maximum backbone intensity"/>-->
+    </bnx_sort> 
+    <postAutonoise>
+      <!--<flag attr="-maxInterval" val0="300"/>-->
+      <flag attr="-MinSD" val0="0.0"/>
+      <include val0="bnx_sort"/>
+      <flag attr="-minlen"      val0="150"/>
+      <flag attr="-maxsites"    val0="750"/>
+      <flag attr="-maxSiteDensity" val0="30"/>
+      <flag attr="-maxContigSiteDensity" val0="40"/>
+      <flag attr="-MaxSD" val0="0.12"/>
+      <flag attr="-MaxSR" val0="0.03"/>
+      <flag attr="-MaxSF" val0="0.15"/>
+    </postAutonoise>
+    <autoNoiseConfig>
+      <flag attr="-MapRate"   val0="0.6" val1="1e-11" display="Map Rate Target" tab="MQR:ASSEMBLE" group="AutoNoise" default0="0.6" description="Map rate at which noise parameters are calculated. Decreasing map rate may enable autoNoise to find usable noise parameters."/>
+    </autoNoiseConfig>
+    <noise0>
+        <flag attr="-usecolor"    val0="1" default0="1" display="Color Channel" group="DeNovo Assembly Noise"/>
+        <flag attr="-FP" val0="2.0" display="False Positive Density (/100Kb) [FP]" tab="ASSEMBLE" group="DeNovo Assembly Noise" default0="1.5" description="Expected rate of false positive (# of labels present in molecules but not in the reference per 100kb). **Value ignored when using autoNoise."/>
+        <flag attr="-FN" val0="0.10" display="False Negative Rate (%/100) [FN]" tab="ASSEMBLE" group="DeNovo Assembly Noise" default0="0.15" description="Expected rate  of false negative (% of reference labels absent in the molecules). **Value ignored when using autoNoise."/>
+        <flag attr="-sf" val0="0.12" display="SiteSD (Kb) [sf]" tab="ASSEMBLE" group="DeNovo Assembly Noise" default0="0.2" description="Fixed stretch noise parameter in kb.  Sf is also named as SiteSD. In combination with ScalingSD,  SiteSD indicates the variance of distance between 2 labels in the molecules. **Value ignored when using autoNoise."/>
+        <flag attr="-sd" val0="0.0" display="ScalingSD (Kb^1/2) [sd]" tab="ASSEMBLE" group="DeNovo Assembly Noise" default0="0." description="Scaled stretch noise parameter in root-kb.  In combination with SiteSD,  ScalingSD indicates the variance of distance between 2 labels in the molecules. **Value ignored when using autoNoise."/>
+	<flag attr="-sr" val0="0.03" display="RelativeSD [sr]" tab="ASSEMBLE" group="DeNovo Assembly Noise" default0="0.03" description="Quadratic stretch noise parameter. In combination with ScalingSD and SiteSD, RelativeSD indicates the variance of distance between 2 labels in the molecules. Value ignored when using autoNoise."/>
+        <flag attr="-res" val0="3.1" display="res" group="DeNovo Assembly Noise" default0="3.5"/>
+        <flag attr="-resSD" val0="0.75"/>
+    </noise0>
+    <initialAssembly>
+      <flag attr="-T"           val0="1e-11" display="P Value Cutoff Threshold" tab="ASSEMBLE" group="Initial Assembly" default0="1e-10" description="Pairwise comparison during initial assembly only outputs alignments with Pvalue below this threshold. Recommended maximum value = 3e-5/GenomeSize(Labels). GenomeSize in Labels = GenomeSize in Bases x Label Density"/>
+      <flag attr="-minlen" val0="200.0"/>
+    </initialAssembly>
+    <extendRefine>
+      <flag attr="-T"           val0="1e-12" display="P Value Cutoff Threshold" tab="ASSEMBLE" group="Extension and Refinement" default0="1e-10" description="Pairwise comparison during extension and refinement only outputs alignments with Pvalue below this threshold. Recommended value is one order of magnitude smaller than Initial Assembly Pvalue."/>
+    </extendRefine>
+    <autoNoise>
+        <include val0="bnx_sort"/>
+	<flag attr="-minlen" val0="150"/>
+	<!--<flag attr="-maxInterval" val0="300"/>-->
+        <flag attr="-usecolor"    val0="1" default0="1"/>
+	<flag attr="-MinSF" val0="0.0"/>
+	<flag attr="-MaxSF" val0="0.3"/>
+	<flag attr="-MaxSD" val0="0.12"/>
+	<flag attr="-MaxSR" val0="0.04"/>
+	<flag attr="-MaxSE" val0="0.5"/>
+	<flag attr="-se" val0="0.25" display="ResolutionSD [se]" tab="ASSEMBLE" group="DeNovo Assembly Noise" default0="0.0" description="Increase in variance due to misresolved labels at either end of interval."/>
+        <flag attr="-L"         val0="0"/>
+	<flag attr="-BestRef"   val0="1"/>
+	<flag attr="-BestRefPV" val0="1"/>
+        <flag attr="-outlier"     val0="1e-3"/>
+        <flag attr="-outlierMax" val0="40."/>
+        <flag attr="-endoutlier"  val0="1e-4"/>
+        <flag attr="-nosplit"       val0="2"/>
+        <flag attr="-biaswt"        val0="0.0"/>
+	<flag attr="-S"          val0="-1000.0"/>
+	<flag attr="-PVres"      val0="2"/>
+        <flag attr="-PVendoutlier"/>
+	<flag attr="-AlignRes"   val0="1.5"/>
+        <flag attr="-rres"    val0="0.9"/>
+        <flag attr="-resEstimate"/>
+        <flag attr="-f"/>
+        <flag attr="-maptype" val0="0"/>
+	<flag attr="-RAmem" val0="3" val1="300"/>
+        <include val0="largeNodeMem"/>
+    </autoNoise>
+    <autoNoise0>
+        <include val0="autoNoiseConfig"/>
+        <include val0="noise0"/>
+	<include val0="autoNoise"/>
+        <flag attr="-mres" val0="0.9"/>
+        <flag attr="-T"         val0="1e-11"/>
+	<flag attr="-A"         val0="9"/>
+        <flag attr="-M"           val0="1" val1="3"/>
+	<flag attr="-sort-runindexShuffle" val0="150.0" val2="1"/>
+        <flag attr="-subset" val0="1" val1="50000" val2="0" val3="4"/>
+	<!--<flag attr="-RepeatMask"  val0="5" val1="0.01"  display="Repeat Mask P-values" group="Pairwise Alignment" default0="2" default1="0.01"/>-->
+        <!--<flag attr="-RepeatRec" val0="0.7" val1="0.6" val2="1.4"/>-->
+	<flag attr="-maxEnd" val0="90."/>
+	<flag attr="-minSNRestimate" val1="2.0" val2="2.0" val3="0.5" val4="100" val5="0.9"/>
+	<flag attr="-bpp" val0="475"/>
+	<flag attr="-bppScan" val0="15" val1="5" val2="80"/>
+	<flag attr="-ScaleDelta" val1="0.06" val2="5" val3="-ScaleDeltaBPP"/>
+	<flag attr="-hashScaleDelta" val1="2"/>
+	<flag attr="-ScanScaling" val0="2" val1="2.0"/>
+	<flag attr="-MaxSF" val0="0.12"/>
+	<flag attr="-MaxSD" val0="0.0"/>	
+	<flag attr="-MaxSR" val0="0.02"/>
+	<flag attr="-MaxSE" val0="0.25"/>
+        <flag attr="-hashgen" val00="5" val01="4" val02="2.3" val03="1.3" val04="0.05" val05="5.0" val06="1" val07="1" val08="1" val09="-hash"/>
+	<flag attr="-hashdelta" val0="14" val1="10" val2="24"/>
+        <flag attr="-hashoffset" val0="1"/>
+	<flag attr="-hashrange" val1="1"/>
+        <flag attr="-hashGC" val0="300"/>
+        <flag attr="-hashT2" val0="1"/>
+	<flag attr="-hashkeys" val0="1"/>
+        <!--<flag attr="-hashMultiMatch" val0="30" val1="10"/>-->
+        <flag attr="-insertThreads" val0="4"/>
+    </autoNoise0>
+    <autoNoise1>
+        <include val0="autoNoise"/>
+        <flag attr="-T"         val0="1e-11"/>
+	<flag attr="-A"         val0="9"/>
+        <flag attr="-M"           val0="2" val1="4"/>
+        <flag attr="-resbias" val0="4.0" val1="64"/>
+	<flag attr="-sort-runindexShuffle" val0="150.0" val2="1"/>
+	<flag attr="-subset" val0="1" val1="100000" val2="0" val3="10"/>
+	<flag attr="-ScanScaling" val0="2"/>
+
+	<flag attr="-Hash_Bits" val0="23"/>
+
+        <flag attr="-hashgen" val00="5" val01="4" val02="2.4" val03="1.4" val04="0.05" val05="5.0" val06="1" val07="1" val08="1" val09="-hash"/>
+	<flag attr="-hashdelta" val0="14" val1="10" val2="24"/>
+        <flag attr="-hashoffset" val0="1"/>
+	<flag attr="-hashrange" val1="1"/>
+	<flag attr="-ScaleDelta" val1="0.03" val2="3" val3="-ScaleDeltaBPP"/>
+	<flag attr="-hashScaleDelta" val1="2"/>
+        <flag attr="-hashGC" val0="300"/>
+        <flag attr="-hashT2" val0="1"/>
+	<flag attr="-hashkeys" val0="1"/>
+	<flag attr="-hashbest" val0="0"/>
+        <flag attr="-insertThreads" val0="4"/>
+
+        <!--<flag attr="-RepeatMask"  val0="5" val1="0.01"  display="Repeat Mask P-values" group="Pairwise Alignment" default0="2" default1="0.01"/>-->
+        <!--<flag attr="-RepeatRec" val0="0.7" val1="0.6" val2="1.4"/>-->
+	<flag attr="-maxEnd" val0="90."/>
+	<flag attr="-minsites"    val0="9"/>
+	<flag attr="-maxsites"    val0="750"/>
+	<flag attr="-maxSiteDensity" val0="30"/>
+	<!--<flag attr="-minSNRestimate" val1="2.0" val2="15.0" val3="0.5" val4="10000" val5="0.9"/>-->
+
+	<flag attr="-MinSD" val0="0.0"/>
+
+        <flag attr="-biaswt"        val0="0.7"/>
+	<flag attr="-biaswtEnd"     val0="0.0"/>
+	<flag attr="-biaswtOutlier" val0="0.0"/>
+	<flag attr="-S"          val0="0.1"/>
+    </autoNoise1>
+    <pairwise>       
+        <!--<use comment="Use with DeNovo Assembly Noise">-->
+	<include val0="splitNodeMem"/>
+	<flag attr="-TotalThreads"/>
+
+	<flag attr="-usecolor"    val0="1" default0="1" display="Color Channel" group="Pairwise Alignment"/>
+        <flag attr="-mres" val0="0.9"/>
+
+        <flag attr="-S"           val0="0.1" display="Alignment Score Cutoff Threshold" group="Pairwise Alignment" default0="1"/>
+        <flag attr="-A"           val0="8" display="Aligned Sites Threshold" group="Pairwise Alignment" default0="5"/>
+
+	<flag attr="-HashMaxHits" val0="200"/>
+	<flag attr="-MaxSF" val0="0.15"/>
+
+	<flag attr="-MinFN" val0="0.10"/>
+	<flag attr="-MinFP" val0="1.0"/>
+	<flag attr="-MinSR" val0="0.025"/>
+
+	<flag attr="-MaxSE" val0="0.5"/>
+        <flag attr="-outlier"     val0="0.001" display="Min Outliers P-value" group="Pairwise Alignment" default0="0.0001"/>
+	<flag attr="-outlierMax"  val0="40."/>
+        <flag attr="-endoutlier"  val0="0" display="Molecule Ends P-value cutoff" group="Pairwise Alignment" default0="0"/>
+	<flag attr="-maxEnd" val0="90."/>
+
+ 	<flag attr="-RefineOverwrite" val0="0"/>
+
+        <flag attr="-RepeatMask"  val0="5" val1="0.01"  display="Repeat Mask P-values" group="Pairwise Alignment" default0="2" default1="0.01"/> 
+        <flag attr="-RepeatRec" val0="0.7" val1="0.6" val2="1.4"/>
+	<flag attr="-PVres"     val0="2"/>
+	<flag attr="-alignscore"/>
+	<flag attr="-align_format" val0="1"/>
+        <flag attr="-maptype" val0="0"/>
+
+        <flag attr="-f"           display="Overwrite output files if already present" group="Pairwise Alignment"/>
+
+	<flag attr="-hashgen" val00="5" val01="4" val02="2.2" val03="1.2" val04="0.05" val05="3.0" val06="1" val07="1" val08="-hash"/>
+        <flag attr="-insertThreads" val0="4"/>
+        <include val0="postAutonoise"/>
+	<include val0="initialAssembly"/>
+    </pairwise>
+    <assembly>
+        <!--<use comment="Use with noise0"/>-->
+	<flag attr="-usecolor"				val0="1" default0="1" display="Color Channel" group="DeNovo Assembly"/>
+        <flag attr="-S"               val0="0." display="Alignment Score Cutoff Threshold" group="DeNovo Assembly" default0="1"/>
+	<flag attr="-contigs_format"  val0="1"/>
+        <flag attr="-MaxRelCoverage"  val0="100"  val1="200"  val2="30" display="Max Rel Coverage" group="DeNovo Assembly" default0="100" default1="200" default2="50"/>
+        <flag attr="-BulgeCoverage"   val0="20" display="Buldge Coverage Threshold" group="DeNovo Assembly" default0="20"/>
+        <flag attr="-MaxCoverage"     val0="10"/>
+        <flag attr="-MinCov"          val0="10" display="Min Coverage" group="DeNovo Assembly" default0="20"/>
+        <flag attr="-MinAvCov"        val0="5" display="Min Avg Coverage" group="DeNovo Assembly" default0="10"/>
+        <flag attr="-MinMaps"         val0="5" display="Min Maps" group="DeNovo Assembly" default0="8"/>
+        <flag attr="-MinContigLen"    val0="0.0" display="Min Assembly Paths Length defined as GenomeMap (kb)" group="DeNovo Assembly" default0="1"/>
+        <flag attr="-EndTrim"         val0="0.9" display="Min Coverage for Contig End Trimming" group="DeNovo Assembly" default0="1"/>
+        <flag attr="-refine"          val0="0" display="Refine Map" group="DeNovo Assembly" default0="0"/>
+
+        <flag attr="-mres" val0="0.9"/>
+
+        <flag attr="-outlier"     val0="0.001"/>
+	<flag attr="-outlierMax"  val0="40."/>
+        <flag attr="-endoutlier"  val0="0"/>
+	<flag attr="-maxEnd" val0="90."/>
+
+        <flag attr="-PVchim"          val0="0.001" val1="3" display="Max Chimeric P-value" group="DeNovo Assembly" default0="0.001" default1="3"/>
+        <flag attr="-FastBulge"       val0="1000" display="Assemble Graph Bulge Molecule Count" group="DeNovo Assembly" default0="1000"/>
+	<flag attr="-FastPaths"   val0="1"/>
+	<flag attr="-draftsize" val0="1"/>
+	<flag attr="-alignscore"/>
+
+	<flag attr="-FragilePreserve"	val0="0"/>
+        <flag attr="-SideBranch" val0="1"/>
+        <flag attr="-SideChain"/>
+	<flag attr="-MinCov" val0="8"/>
+	<flag attr="-MaxCoverage" val0="8"/>
+
+	<include val0="largeNodeBigMem"/>
+	<flag attr="-AlignmentFilter" val0="100" val1="5.0" val2="1.0" val3="0.6"/>
+        <flag attr="-f"               display="Overwrite Output Files" group="DeNovo Assembly"/>
+        <include val0="postAutonoise"/>
+	<include val0="initialAssembly"/>
+
+	<flag attr="-maxContigSiteDensity" val0="0"/>
+    </assembly>
+    <refineA>
+	<include val0="initialAssembly"/>
+
+	<include val0="tinyNodeMem"/>
+	<flag attr="-TotalThreads"/>
+	<flag attr="-boostThreads"   val0="10800"/>
+
+	<flag attr="-usecolor"    val0="1" default0="1" display="Color Channel" group="First Refinement"/>
+        <flag attr="-extend"        val0="1" display="Allow Extended Molecule" group="First Refinement" default0="1"/>
+        <flag attr="-refine"        val0="2" display="Refine Map" group="First Refinement" default0="2"/>
+        <flag attr="-EndTrim"       val0="1.9" display="Min Coverage for Contig End Trimming" group="First Refinement" default0="0.99"/>
+        <flag attr="-LRbias"        val0="1e2" display="Soft Threshold" group="First Refinement" default0="1e2"/>
+        <flag attr="-deltaX"        val0="4" display="Molecule Labels Metric" group="First Refinement" default0="4"/>
+        <flag attr="-deltaY"        val0="6" display="Mapped Labels Metric" group="First Refinement" default0="6"/>
+
+        <flag attr="-MaxSE"   val0="0.5"/>
+        <flag attr="-outlier"       val0="1e-2" display="Min Outliers P-value" group="First Refinement" default0="1e-5"/>
+	<flag attr="-outlierMax"    val0="40."/>
+        <flag attr="-endoutlier"    val0="0.001" display="Molecule Ends P-value Cutoff" group="First Refinement" default0="0.00001"/>
+	<flag attr="-maxEnd" val0="90."/>
+	<flag attr="-RTHETA_FIX" val0="0"/>
+
+        <flag attr="-maptype"       val0="0"/>
+	<flag attr="-contigs_format"  val0="1"/>
+	<flag attr="-PVres" val0="2"/>
+
+        <flag attr="-rres" val0="1.7"/>
+        <flag attr="-mres" val0="0.9"/>
+	<flag attr="-MinSplitLen" val0="50.0"/>
+	<flag attr="-alignscore"/>
+
+        <flag attr="-Mprobeval"     val0="0.02" val1="0.01"/>
+	<flag attr="-RefineStep" val0="0.05" val1="0.02" val2="0.05" val3="0.05" val4="4" val5="0.010" val6="0.005" val7="0.10"/>
+	<flag attr="-RefineSizeRange" val1="0.5" val2="2.0" val3="0.7" val4="1.4"/>
+	<flag attr="-skip_score" val1="10.0" val2="100"/>
+	<flag attr="-SiteMerge" val1="0"/>
+
+ 	<flag attr="-RefineOverwrite" val0="0"/>
+
+	<flag attr="-RefineRange" val0="6" val1="6"/>
+	<flag attr="-RefineErr" val0="1e-6" val1="0" val2="0"/>
+
+        <flag attr="-f" display="Overwrite Output Files" group="First Refinement"/>
+        <include val0="postAutonoise"/>
+    </refineA>
+    <refineBCommon>
+	<include val0="extendRefine"/>
+
+	<flag attr="-usecolor"    val0="1" default0="1" display="Color Channel" group="Second Refinement"/>
+        <flag attr="-A"             val0="5"  display="Aligned Sites Threshold" group="Second Refinement" default0="5"/>
+	<flag attr="-S"  val0="0"/>
+        <flag attr="-L"             val0="130"/>
+
+        <!--<flag attr="-RepeatMask"    val0="5" val1="0.01" display="Repeat Mask P-values" group="Second Refinement" default0="2" default1="0.01"/>-->
+        <!--<flag attr="-RepeatRec" val0="0.7" val1="0.6" val2="1.4"/>-->
+
+        <flag attr="-maptype" val0="0"/>
+        <flag attr="-extend"        val0="1" display="Allow Extended Molecule" group="Second Refinement" default0="1"/>
+        <flag attr="-MaxCov"        val0="80" display="Max Coverage" group="Second Refinement" default0="100"/>
+	<flag attr="-MaxCovWt" val0="0"/>
+
+        <flag attr="-contigsplit"   val0="0.20" val1="0.25"/>
+	<flag attr="-splitcnt"/>
+        <flag attr="-splitrev" val0="3"/>
+	<flag attr="-CmapSNR"/>
+	<flag attr="-splitsite"/>
+        <flag attr="-MinSplitLen"   val0="50.0" display="Min Split Length (Kb)" group="Second Refinement" default0="100"/>
+	<flag attr="-splitFragile" val0="20" val1="2.0" val2="0"/>
+
+	<flag attr="-TrimNorm"  val0="0" val1="30.0"/>
+	<flag attr="-TrimNormMed" val0="100"/>
+	<flag attr="-TrimNormMin" val0="2.9" val1="0.0"/>
+        <flag attr="-CovTrim"       val0="3"/>
+        <flag attr="-CovTrimLen" val0="60"/>
+	<flag attr="-ChimQuality" val0="2"/>
+	<flag attr="-ChimQualityFix"/>
+        <flag attr="-TrimNormChim" val0="2" val1="1"/>
+	<flag attr="-FragileQuality" val0="5.0" val1="10" val2="2"/>
+	<flag attr="-OutlierQuality" val0="1"/>
+        <flag attr="-TrimOutlier" val0="0"/>
+
+        <flag attr="-MaxSE"   val0="0.5"/>
+        <flag attr="-outlier"       val0="1e-2"/>
+	<flag attr="-outlierMax"    val0="40."/>
+	<flag attr="-outlierLambda" val0="20."/>
+	<flag attr="-outlierType0" val="1"/>
+        <flag attr="-endoutlier"    val0="1.1e-2"/>
+	<flag attr="-skip_dist" val0="0.01" val2="0.01"/>
+	<flag attr="-endoutlierFinal" val0="1"/>
+	<flag attr="-maxEnd" val0="90."/>
+	<flag attr="-RTHETA_FIX" val0="0"/>
+
+        <flag attr="-nosplit"       val0="2"/>
+        <flag attr="-EndTrim"       val0="7.9" val1="0.2"/>
+        <flag attr="-biaswt"        val0="0.7"/>
+	<flag attr="-biaswtEnd"     val0="0.0"/>
+	<flag attr="-biaswtOutlier" val0="0.0"/>
+	<flag attr="-biaswtRefine"  val0="0.7" val2="1"/>
+
+	<flag attr="-PVres"      val0="2"/>
+        <flag attr="-PVendoutlier"/>
+	<flag attr="-AlignRes" val0="1.5"/>
+        <flag attr="-rres" val0="0.9"/>
+
+	<flag attr="-hashgen" val00="5" val01="4" val02="2.4" val03="1.4" val04="0.05" val05="5.0" val06="1" val07="1" val08="3"/>
+	<flag attr="-hash" val0="-mres" val1="0.9"/>
+	<flag attr="-hashdelta" val1="14" val2="10" val3="24"/>
+	<flag attr="-hashrange" val1="1"/>
+        <flag attr="-HSDrange" val0="1.0"/>
+        <flag attr="-hashoffset" val0="1"/>
+        <flag attr="-hashMultiMatch" val0="30" val1="5"/>
+        <flag attr="-hashGC" val0="300"/>
+        <flag attr="-hashT2" val0="1"/>
+	<flag attr="-hashkeys" val0="1"/>
+	<flag attr="-insertThreads" val0="4"/>
+
+	<flag attr="-BestRef" val0="0"/>
+	<flag attr="-BestRefPV" val0="1"/>
+        <flag attr="-BestRefWT"    val0="0"/>
+        <flag attr="-AddFragsWT"    val0="0"/>
+	<flag attr="-MultiMatches" val0="0"/>
+	<flag attr="-refineMinWT" val0="0.02"/>
+
+        <flag attr="-deltaX"        val0="4" display="Molecule Labels Metric" group="Second Refinement" default0="4"/>
+        <flag attr="-deltaY"        val0="6" display="Mapped Labels Metric" group="Second Refinement" default0="6"/>
+
+        <flag attr="-endoutlierRef"   val0="1e-4" val1="1e-3"/>
+	<flag attr="-outlierRef" val0="1e-3" val1="1e-2"/>
+        <flag attr="-LRbias"        val0="1e0"/>
+
+	<flag attr="-RefineRange" val0="6" val1="6"/>
+	<flag attr="-RefineErr" val0="1e-6" val1="0" val2="0"/>
+	<flag attr="-RefineXRange" val0="2"/>
+	<flag attr="-RefineAlignExt" val0="1"/>
+	<flag attr="-RefineFillHmap" val0="0"/>
+
+	<flag attr="-LocalRange" val0="1"/>
+	<flag attr="-LocalTheta" val0="1"/>
+
+	<flag attr="-deltaXRef" val0="6"/>
+	<flag attr="-deltaYRef" val0="6"/>
+	<flag attr="-deltaExtXRef" val0="8"/>
+	<flag attr="-deltaExtYRef" val0="8"/>
+	<flag attr="-outlierLambdaRef" val0="10.0"/>
+	<flag attr="-outlierTypeRef" val0="1"/>
+
+        <flag attr="-Mprobeval"     val0="0.02" val1="0.01"/>
+	<flag attr="-RefineStep" val0="0.05" val1="0.02" val2="0.05" val3="0.05" val4="4" val5="0.010" val6="0.005" val7="0.10"/>
+	<flag attr="-RefineSizeRange" val1="0.5" val2="2.0" val3="0.7" val4="1.4"/>
+	<flag attr="-skip_score" val1="10.0" val2="100"/>
+	<flag attr="-SiteMerge" val1="0"/>
+	<flag attr="-TB" val0="1e-6" val1="1e-6" val2="-TBmult" val3="0"/>
+	<flag attr="-FN_Refine" val0="1.0" val1="1.0" val3="0.0" val4="0.0"/>
+        <flag attr="-cres" val0="5.6" val1="2" val2="0.05"/>
+	<flag attr="-cresCheckDel" val0="1"/>
+	<flag attr="-cresMaxLPdrop" val0="0.001"/>
+	<flag attr="-cresRefine" val0="0"/>
+
+	<flag attr="-RefineFillMap" val0="0"/>
+	<flag attr="-Kmax" val0="3"/>
+
+	<flag attr="-finalsort-sitesdec"/>
+	<flag attr="-RAmem" val0="3" val1="300"/>
+
+        <flag attr="-f"/>
+        <include val0="postAutonoise"/>
+    </refineBCommon>
+    <refineB>
+	<include val0="refineBCommon"/>
+        <flag attr="-refine"        val0="2" display="Refine Map" group="Second Refinement" default0="2"/>
+	<include val0="tinyNodeMem"/>
+    </refineB>
+    <refineB0>
+	<include val0="refineBCommon"/>
+
+        <flag attr="-refine"        val0="0" display="Refine Map" group="Second Refinement" default0="0"/>
+	<flag attr="-nostat"/>
+	<flag attr="-BNXnoRunData" val0="1"/>
+
+	<include val0="splitNodeMem"/>
+	<flag attr="-TotalThreads"/>
+    </refineB0>
+    <refineB1>
+	<include val0="refineBCommon"/>
+        <flag attr="-refine"        val0="2" display="Refine Map" group="Second Refinement" default0="2"/>
+	<include val0="tinyNodeMem"/>
+	<flag attr="-TotalThreads"/>
+	<flag attr="-boostThreads"   val0="10800"/>
+	<flag attr="-RefineOverwrite" val0="0"/>
+
+        <flag attr="-MinMapwt" val0="0.2" val1="0.2"/>
+	<flag attr="-XMAPmapWT" val0="1"/>
+    </refineB1>
+    <refineFinalCommon>
+	<include val0="extendRefine"/>
+
+	<flag attr="-usecolor"    val0="1" default0="1" display="Color Channel" group="Final Refinement"/>
+        <flag attr="-A"             val0="5" display="Aligned Sites Threshold" group="Final Refinement" default0="5"/>
+	<flag attr="-S"             val0="0"/>
+        <flag attr="-L"             val0="80"/>
+
+        <!--<flag attr="-RepeatMask"    val0="5" val1="0.01" display="Repeat Mask P-values" group="Second Refinement" default0="2" default1="0.01"/>-->
+        <!--<flag attr="-RepeatRec" val0="0.7" val1="0.6" val2="1.4"/>-->
+
+        <flag attr="-maptype" val0="0"/>
+        <flag attr="-extend"        val0="1" display="Allow Extended Molecule" group="Final Refinement" default0="1"/>
+        <flag attr="-MaxCov"        val0="100" display="Max Coverage" group="Final Refinement" default0="100"/>
+	<flag attr="-MaxCovWt" val0="0"/>
+	
+        <flag attr="-contigsplit"   val0="0.2" val1="0.029" val2="ID"/>
+	<flag attr="-splitcnt"/>
+        <flag attr="-splitrev" val0="3"/>
+	<flag attr="-splitsite"/>
+        <flag attr="-MinSplitLen"   val0="50.0"/>
+	<!--< <flag attr="-splitFragile" val0="20" val1="2.0" val2="0"/>-->
+
+	<flag attr="-TrimNorm"  val0="2"/>
+	<flag attr="-TrimNormMed" val0="100"/>
+	<flag attr="-TrimNormMin" val0="2.9" val1="0.0"/>
+        <flag attr="-CovTrim"       val0="3"/>
+        <flag attr="-CovTrimLen" val0="60"/>
+	<flag attr="-ChimQuality" val0="2"/>
+	<flag attr="-ChimQualityFix"/>
+        <flag attr="-TrimNormChim" val0="2" val1="1"/>
+	<flag attr="-FragileQuality" val0="5.0" val1="10" val2="2"/>
+	<flag attr="-OutlierQuality" val0="1"/>
+        <flag attr="-TrimOutlier" val0="0"/>
+
+        <flag attr="-MaxSE"   val0="0.5"/>
+        <flag attr="-outlier"       val0="1e-2" display="Min Outliers P-value" group="Second Refinement" default0="1e-5"/>
+	<flag attr="-outlierLambda" val0="20.0"/>
+	<flag attr="-outlierType0" val="0"/>
+        <flag attr="-endoutlier"    val0="1e-3" display="Molecule Ends P-value Cutoff" group="Second Refinement" default0="1e-4"/>
+	<flag attr="-skip_dist" val0="0.01" val2="0.01"/>
+	<flag attr="-endoutlierFinal" val0="1e-2"/>
+	<flag attr="-maxEnd" val0="90.0"/>
+	<flag attr="-RTHETA_FIX" val0="0"/>
+
+        <flag attr="-nosplit"       val0="2" display="Allow Chimeric Split" group="Final Refinement" default0="2"/>
+        <flag attr="-EndTrim"       val0="3.9" val1="0.2"/>
+	<flag attr="-EndTrimCQ"     val0="1"/>
+        <flag attr="-biaswt"        val0="0.7" display="Bias" group="Final Refinement" default0="0"/>
+	<flag attr="-biaswtEnd"     val0="0.0"/>
+	<flag attr="-biaswtRefine"  val0="0.7" val2="1"/>
+	<flag attr="-biaswtOutlier" val0="0.0"/>
+
+	<flag attr="-PVres"      val0="2"/>
+        <flag attr="-PVendoutlier"/>
+	<flag attr="-AlignRes" val0="1.5"/>
+
+	<flag attr="-hashgen" val00="5" val01="4" val02="2.4" val03="1.4" val04="0.05" val05="5.0" val06="1" val07="1" val08="3" val09="-hash"/>
+	<flag attr="-hashdelta" val1="25" val2="10" val3="45"/>
+	<flag attr="-hashrange" val1="1"/>
+        <flag attr="-HSDrange" val0="1.0"/>
+        <flag attr="-hashoffset" val0="1"/>
+        <flag attr="-hashMultiMatch" val0="30" val1="5"/>
+        <flag attr="-hashGC" val0="300"/>
+        <flag attr="-hashT2" val0="1"/>
+	<flag attr="-hashkeys" val0="1"/>
+	<flag attr="-insertThreads" val0="4"/>
+
+	<flag attr="-BestRef" val0="0"/>
+	<flag attr="-BestRefPV" val0="1"/>
+        <flag attr="-BestRefWT"    val0="1"/>
+        <flag attr="-AddFragsWT"    val0="1"/>
+	<flag attr="-MultiMatches" val0="0"/>
+	<flag attr="-refineMinWT" val0="0.02"/>
+
+        <flag attr="-deltaX"        val0="4"/>
+        <flag attr="-deltaY"        val0="6"/>
+	<!--<flag attr="-outlierExtend" val0="6" val1="18"/>-->
+
+        <flag attr="-endoutlierRef"   val0="1e-4" val1="1e-3"/>
+	<flag attr="-outlierRef" val0="1e-3" val1="1e-3"/>
+        <flag attr="-LRbias"        val0="1e0"/>
+
+	<flag attr="-RefineRange" val0="6" val1="6"/>
+	<flag attr="-RefineErr" val0="1e-6" val1="0" val2="0"/>
+	<flag attr="-RefineXRange" val0="2"/>
+	<flag attr="-RefineAlignExt" val0="1"/>
+	<flag attr="-RefineFillHmap" val0="0"/>
+
+	<flag attr="-LocalRange" val0="1"/>
+	<flag attr="-LocalTheta" val0="1"/>
+
+	<flag attr="-deltaXRef" val0="6"/>
+	<flag attr="-deltaYRef" val0="6"/>
+	<flag attr="-deltaExtXRef" val0="8"/>
+	<flag attr="-deltaExtYRef" val0="8"/>
+	<flag attr="-outlierLambdaRef" val0="10.0"/>
+	<flag attr="-outlierTypeRef" val0="1"/>
+
+	<flag attr="-outlierLambdaSwitch" val0="1e4" val1="3.0"/>
+	<flag attr="-outlierTypeSwitch" val0="1" val1="1"/>
+	<flag attr="-endoutlierSwitch" val0="1e-24" val1="1e-3"/>
+	<flag attr="-RefineSwitchFade" val0="2"/>
+	<flag attr="-LRbiasSwitch" val0="1e0" val1="1e0"/>
+
+	<!--<flag attr="-Haplotype" val0="1e-1" val1="1e-3" val2="1e-5"/>-->
+	<flag attr="-refineDefer" val0="1"/>
+	<flag attr="-HapSiteRes" val0="1.0"/>
+	<flag attr="-HapSiteResDelay" val0="2.0" val1="11" val2="1"/>
+	<flag attr="-HapSiteUnphased" val0="12.0" val1="1e-20"/>
+	<flag attr="-HapMinCov" val0="10" val1="0.25" val2="0.7" val3="50.0" val4="1e-25" val5="0.20" val6="1e-50" val7="1.5" val8="4.0" val9="2"/>
+	<flag attr="-HapThresh" val0="6" val1="1" val2="6" val3="100.0" val4="1.0" val5="1.0"/>
+	<flag attr="-HapIndelMerge"/>
+  	<!--<flag attr="-IndelScore" val0="3.0" val1="1" val2="1e-3" val3="1e-24" val4="1e-25"/>-->
+        <flag attr="-HapIndelHiRes" val0="1" val1="2"/>
+	<flag attr="-HapFilterLast" val0="1"/>
+	<flag attr="-HapMergeSNPs" val0="1"/>
+
+	<flag attr="-HapIndelSkip" val0="50" val1="10"  val2="1.0" val3="0.05"/>
+	<flag attr="-HapMinLL" val0="1.0" val1="0.1" val2="0.1" val3="1.0" val4="1.0" val5="1.0"/>
+	<flag attr="-HapEndTrim" val0="3.9" val1="2.0"/>
+	<flag attr="-HapFast" val0="5"/>
+	<flag attr="-HapLocalStop" val0="3" val1="1"/>
+
+	<flag attr="-MPmem" val0="3" val1="10"/>
+
+	<flag attr="-SplitHmap" val0="1"/>
+	<flag attr="-RefineHmap" val0="1"/>
+
+        <flag attr="-Mprobeval"     val0="0.02" val1="0.01"/>
+	<flag attr="-RefineStep" val0="0.05" val1="0.02" val2="0.05" val3="0.05" val4="4" val5="0.010" val6="0.005" val7="0.10"/>
+	<flag attr="-RefineSizeRange" val1="0.5" val2="2.0" val3="0.7" val4="1.4"/>
+	<flag attr="-skip_score" val1="10.0" val2="100"/>
+	<flag attr="-SiteMerge" val1="0"/>
+	<flag attr="-FN_Refine" val0="1.0" val1="1.0" val3="0.0" val4="0.0"/>
+        <flag attr="-rres" val0="0.9"/>
+	<flag attr="-mres" val1="0.9"/>
+        <flag attr="-cres" val0="5.6" val1="2" val2="0.05"/>
+	<flag attr="-cresMaxLPdrop" val0="4.0"/>
+	<flag attr="-cresCheckDel" val0="1"/>
+	<flag attr="-cresRefine" val0="0"/>
+
+	<flag attr="-RefineFillMap" val0="0"/>
+	<flag attr="-Kmax" val0="3"/>
+
+	<flag attr="-finalsort-sitesdec"/>
+	<flag attr="-RAmem" val0="3" val1="300"/>
+
+        <flag attr="-f"             display="Overwrite Output Files" group="Final Refinement"/>
+        <include val0="postAutonoise"/>
+    </refineFinalCommon>
+    <refineFinal>
+	<include val0="refineFinalCommon"/>
+        <flag attr="-refine"        val0="2" display="Refine Map" group="Final Refinement" default0="3"/>
+	<include val0="tinyNodeMem"/>
+    </refineFinal>
+    <refineFinal0>
+	<include val0="refineFinalCommon"/>
+
+        <flag attr="-refine"        val0="0" display="Refine Map" group="Final Refinement" default0="3"/>
+	<flag attr="-nostat"/>
+	<flag attr="-BNXnoRunData" val0="1"/>
+	
+	<flag attr="-MapScale" val0="0.03" val1="1"/>
+	<flag attr="-ScaleDelta" val0="0.03" val1="1"/>
+	<flag attr="-hashScaleDelta" val0="2"/>
+
+	<include val0="splitNodeMem"/>
+	<flag attr="-TotalThreads"/>
+    </refineFinal0>
+    <refineFinal1>
+	<include val0="refineFinalCommon"/>
+        <flag attr="-refine"        val0="2" display="Refine Map" group="Final Refinement" default0="3"/>
+	<include val0="tinyNodeMem"/>
+	<flag attr="-TotalThreads"/>
+	<flag attr="-boostThreads"   val0="10800"/>
+
+        <flag attr="-MinMapwt" val0="0.2" val1="0.2"/>
+	<flag attr="-XMAPmapWT" val0="1"/>
+    </refineFinal1>
+    <extensionCommon>
+	<flag attr="-usecolor"    val0="1" default0="1" display="Color Channel" group="Extension"/>
+        <flag attr="-A"             val0="8"/>
+	<flag attr="-S"             val0="0.1"/>
+        <flag attr="-L"             val0="110.0"/>
+	<flag attr="-T" val0="1e-12"/>
+	<flag attr="-TE" val0="1e-10"/>
+	<flag attr="-Erefine" val0="2" val1="0.0"/>
+
+        <flag attr="-RepeatMask"    val0="5" val1="0.01" display="Repeat Mask P-values" group="Second Refinement" default0="2" default1="0.01"/>
+        <flag attr="-RepeatRec" val0="0.7" val1="0.6" val2="1.4"/>
+
+        <flag attr="-maptype" val0="0"/>
+        <flag attr="-extend"        val0="2"/>
+        <flag attr="-extonly"         val0="150.0" val1="0.0"/>
+        <flag attr="-maxExtend"       val0="150.0"/>
+        <flag attr="-MaxCov"          val0="80"/>
+	<flag attr="-MaxCovWt" val0="0"/>
+	<!--<flag attr="-minoverlap" val0="0.6"/>-->
+
+        <!--<flag attr="-extsplit" val0="8" val1="0.10" val2="2" val3="12.0" val4="2" val5="30.0" val6="5" val7="ID"/>-->
+	<flag attr="-extTrim" val0="1"/>
+	<flag attr="-extsplitMinWT" val0="0.01"/>
+	<flag attr="-splitFilt" val0="0.01"/>
+	<flag attr="-extsplitNE" val0="0" val1="20.0"/>
+	<flag attr="-extendWT" val0="20.0" val1="1.0" val2="5" val3="30.0"/>
+	<flag attr="-extendWTend" val0="0"/>
+	<flag attr="-extendWTdup" val0="0"/>
+	<flag attr="-FilterXmapWT" val0="1"/>
+	<flag attr="-FilterXmapSplit" val0="1"/>
+	<flag attr="-splitWT" val0="0.01"/>
+	<flag attr="-keepsplitmaps" val0="0"/>
+	<flag attr="-CloneLimitLen" val0="300.0" val1="25"/>
+	<flag attr="-splitcnt"/>
+        <flag attr="-splitrev" val0="3"/>
+	<flag attr="-CmapSNR"/>
+	<flag attr="-splitsite"/>
+        <flag attr="-MinSplitLen"   val0="50.0"/>
+	<!--< <flag attr="-splitFragile" val0="20" val1="2.0" val2="0"/>-->
+
+	<flag attr="-TrimNorm"  val0="0"/>
+	<flag attr="-TrimNormMed" val0="100"/>
+	<flag attr="-TrimNormMin" val0="2.9" val1="0.0"/>
+        <flag attr="-CovTrim"       val0="3"/>
+        <flag attr="-CovTrimLen" val0="60"/>
+	<flag attr="-ChimQuality" val0="2"/>
+	<flag attr="-ChimQualityFix"/>
+        <flag attr="-TrimNormChim" val0="2" val1="1"/>
+	<flag attr="-FragileQuality" val0="5.0" val1="10" val2="2"/>
+	<flag attr="-OutlierQuality" val0="1"/>
+        <flag attr="-TrimOutlier" val0="0"/>
+
+        <flag attr="-MaxSE"   val0="0.5"/>
+        <flag attr="-outlier"       val0="1e-2"/>
+	<flag attr="-outlierNorm0" val0="2"/>
+	<flag attr="-outlierMax"    val0="40."/>
+	<flag attr="-outlierLambda" val0="20."/>
+	<flag attr="-outlierType0" val="1"/>
+        <flag attr="-endoutlier"    val0="1.1e-2"/>
+	<flag attr="-endoutlierFinal" val0="1.1e-2"/>
+	<flag attr="-maxEnd" val0="90."/>
+	<flag attr="-RTHETA_FIX" val0="0"/>
+
+        <flag attr="-nosplit"         val0="2"/>
+        <flag attr="-EndTrim"         val0="2.9" val1="0.2"/>
+        <flag attr="-biaswt"        val0="0.7"/>
+	<flag attr="-biaswtEnd"     val0="0.0"/>
+	<flag attr="-biaswtRefine"  val0="0.7" val2="1"/>
+	<flag attr="-biaswtOutlier" val0="0.0"/>
+        <flag attr="-LRbias"          val0="1e0"/>
+
+	<flag attr="-PVres"      val0="2"/>
+        <flag attr="-PVendoutlier"/>
+	<flag attr="-AlignRes"   val0="1.5"/>
+
+	<flag attr="-hashgen" val00="5" val01="4" val02="2.4" val03="1.4" val04="0.05" val05="5.0" val06="1" val07="1" val08="3" val09="-hash"/>
+	<flag attr="-hashdelta" val1="14" val2="10" val3="24"/>
+	<flag attr="-hashrange" val1="1"/>
+        <flag attr="-HSDrange" val0="1.0"/>
+        <flag attr="-hashoffset" val0="1"/>
+        <flag attr="-hashMultiMatch" val0="30" val1="5"/>
+        <flag attr="-hashGC" val0="300"/>
+        <flag attr="-hashT2" val0="1"/>
+	<flag attr="-hashkeys" val0="1"/>
+	<flag attr="-insertThreads" val0="4"/>
+
+        <flag attr="-BestRef"    val0="0"/>
+        <flag attr="-BestRefPV"    val0="1"/>
+        <flag attr="-BestRefWT"    val0="1"/>
+        <flag attr="-AddFragsWT"    val0="0"/>
+	<flag attr="-MultiMatches" val0="6" val1="1e-11" val2="0.1" val3="6" val4="100.0"/>
+	<flag attr="-MultiMatchesFilter" val0="2"/>
+	<flag attr="-refineMinWT" val0="0.02"/>
+
+        <flag attr="-deltaX"          val0="4"/>
+        <flag attr="-deltaY"          val0="6"/>
+
+        <flag attr="-endoutlierRef"   val0="1e-6" val1="1e-2"/>
+	<flag attr="-outlierRef" val0="1e-3" val1="1e-2"/>
+	<flag attr="-outlierNormRef" val0="2"/>
+	<flag attr="-deltaEndRef" val0="4"/>
+        <flag attr="-LRbias"        val0="1e-50"/>	
+
+	<flag attr="-RefineRange" val0="6" val1="6"/>
+	<flag attr="-RefineErr" val0="1e-6" val1="0" val2="0"/>
+	<flag attr="-RefineXRange" val0="2"/>
+	<flag attr="-RefineAlignExt" val0="1"/>
+	<flag attr="-RefineFillHmap" val0="0"/>
+
+	<flag attr="-LocalRange" val0="1"/>
+	<flag attr="-LocalTheta" val0="1"/>
+
+	<flag attr="-deltaXRef" val0="5"/>
+	<flag attr="-deltaYRef" val0="6"/>
+	<flag attr="-deltaExtXRef" val0="5"/>
+	<flag attr="-deltaExtYRef" val0="6"/>
+	<flag attr="-outlierLambdaRef" val0="10.0"/>
+	<flag attr="-outlierTypeRef" val0="1"/>
+
+        <flag attr="-Mprobeval"     val0="0.02" val1="0.01"/>
+	<flag attr="-RefineStep" val0="0.05" val1="0.02" val2="0.05" val3="0.05" val4="4" val5="0.010" val6="0.005" val7="0.10"/>
+	<flag attr="-RefineSizeRange" val1="0.5" val2="2.0" val3="0.7" val4="1.4"/>
+	<flag attr="-skip_dist" val0="0.01" val1="0.01"/>
+	<flag attr="-skip_score" val1="100.0" val2="100"/>
+	<flag attr="-SiteMerge" val1="0"/>
+	<!--<flag attr="-TB" val0="1e-6" val1="1e-6" val2="-TBmult" val3="0"/>-->
+	<flag attr="-FN_Refine" val0="1.0" val1="1.5" val3="0.0" val4="0.20"/>
+	<flag attr="-mres" val1="0.9"/>
+        <flag attr="-rres" val0="0.9"/>
+        <flag attr="-cres" val0="5.6" val1="2" val2="0.05"/>
+	<flag attr="-cresMaxLPdrop" val0="4.0"/>
+	<flag attr="-cresCheckDel" val0="1"/>
+	<flag attr="-cresRefine" val0="0"/>
+
+	<flag attr="-RefineFillMap" val0="0"/>
+	<flag attr="-Kmax" val0="3"/>
+
+	<flag attr="-finalsort-sitesdec"/>
+	<flag attr="-RAmem" val0="3" val1="300"/>
+
+        <flag attr="-f"/>
+        <include val0="postAutonoise"/>
+    </extensionCommon>
+    <lastExtension>
+        <flag attr="-extonly"  val0="0"/>
+    </lastExtension>
+
+    <extension>
+        <use comment="Use with noise1"/>
+	<include val0="extensionCommon"/>
+        <flag attr="-refine"          val0="2"  display="Refine Map" group="First Refinement" default0="3"/>
+	<include val0="tinyNodeMem"/>
+    </extension>
+    <extension0>
+        <use comment="Use with noise1"/>
+	<include val0="extensionCommon"/>
+        <flag attr="-refine"          val0="0"/>
+	<flag attr="-nostat"/>
+	<flag attr="-BNXnoRunData" val0="1"/>
+
+	<include val0="splitNodeMem"/>
+	<flag attr="-TotalThreads"/>
+    </extension0>
+    <extension1>
+        <use comment="Use with noise1"/>
+	<include val0="extensionCommon"/>
+        <flag attr="-refine"          val0="3"/>
+	<include val0="tinyNodeMem"/>
+	<flag attr="-TotalThreads"/>
+	<flag attr="-boostThreads"   val0="10800"/>
+	<flag attr="-RefineOverwrite" val0="0"/>
+
+        <flag attr="-MinMapwt" val0="0.2" val1="0.2"/>
+	<flag attr="-XMAPmapWT" val0="1"/>
+    </extension1>
+    <merge>
+        <flag attr="-T"           val0="1e-16" display="P Value Cutoff Threshold" group="Merge" default0="1e-15" description="Only merge contigs whose alignment Pvalue is below this threshold. Increasing stringency by lowering this T value will help avoiding chimeric merges (chimeric contigs). Decreasing stringency will increase chimeric contig rate."/>
+        <flag attr="-A"           val0="12" display="Minimum number of aligned sites" group="Merge" default0="2"/>
+	<flag attr="-S"             val0="-9999"/>
+        <flag attr="-biaswt"      val0="0.3"/>
+	<flag attr="-biaswtOutlier" val0="0.0"/>
+
+        <flag attr="-mres"        val0="1.2" display="Label Resolution (pixel)" group="Merge" default0="1e-3"/>
+        <flag attr="-res"        val0="2.6"/>
+        <flag attr="-FP"          val0="0.12" display="False Positive Density (/100Kb)" group="Merge" default0="0.8"/>
+        <flag attr="-FN"          val0="0.012" display="False Negative Rate (%)" group="Merge" default0="0.08"/>
+        <flag attr="-sf"          val0="0.1" display="SiteSD (Kb)" group="Merge" default0="0.1"/>
+        <flag attr="-sd"          val0="0.0" display="ScalingSD (Kb^1/2)" group="Merge" default0="0.0"/>       
+        <flag attr="-sr"          val0="0.01" display="ScalingSD (Kb^1/2)" group="Merge" default0="0.01"/>       
+        <flag attr="-outlier"     val0="1e-4" display="Min Outliers P-value" group="Merge" default0="0"/>
+	<flag attr="-outlierBC"/>
+        <flag attr="-endoutlier"  val0="1e-2" display="Molecule Ends P-value cutoff" group="Merge" default0="0"/>
+
+        <flag attr="-pairmerge"   val0="170" val1="0.0" val2="100.0" val3="100.0" val4="100.0" val5="0"/>
+	<flag attr="-outlierBalanced" val0="10"/>
+        <flag attr="-pairmergeExcludeOutliers" val0="1"/>
+	<flag attr="-pairmergeOverlapped" val0="100" val1="2.0"/>
+        <flag attr="-pairmergeRepeat"/>
+	<flag attr="-TrimmedNoMerge" val0="400.0" val1="5.0"/>
+	<flag attr="-Truncate" val0="300.0" val1="25" val2="15.0"/>
+	<flag attr="-MaxPalindrome" val0="580.0" val1="60" val2="60.0"/>
+	<flag attr="-MaxInvPalindrome" val0="290.0" val1="30" val2="100.0"/>
+	<flag attr="-randomize"   val0="1"/>
+	<flag attr="-CIDrenumber" val0="1"/>
+
+        <flag attr="-RepeatMask"  val0="5" val1="0.01" display="Repeat Mask P-values" group="Merge" default0="2" default1="0.01"/>
+        <flag attr="-RepeatRec" val0="0.7" val1="0.6" val2="1.4"/>
+
+        <flag attr="-outlierExtend" val0="4" val1="60"/>
+	<flag attr="-RAmem" val0="4" val1="300"/>
+
+	<flag attr="-hashgen" val00="5" val01="4" val02="2.4" val03="1.4" val04="0.05" val05="10.0" val06="1" val07="1" val08="-hash"/>
+	<flag attr="-hashGC" val0="300"/>
+	<flag attr="-hashT2" val0="1"/>
+	<flag attr="-hashkeys" val0="1"/>
+	<flag attr="-insertThreads" val0="4"/>
+
+        <flag attr="-f" display="Overwrite Output Files" group="Merge"/>
+	<include val0="largeNodeMem2"/>	
+    </merge>
+    <roughMerge>
+      <flag attr="-ScaleDelta" val0="0.025" val1="20"/>
+      <flag attr="-hashScaleDelta" val0="2"/>
+
+      <flag attr="-sr" val0="0.02"/>
+      <flag attr="-pairmerge"   val0="90" val1="0.0" val2="150.0" val3="150.0" val4="150.0" val5="10"/>
+      <flag attr="-BreakEndOutlier" val0="90" val1="10" val2="100" val3="10"/>
+      <flag attr="-BreakOutlier" val0="90" val1="10" val2="100"/>
+    </roughMerge>
+    <firstMerge>
+      <flag attr="-sr" val0="0.02"/>
+      <flag attr="-pairmerge"   val0="170" val1="0.0" val2="150.0" val3="150.0" val4="150.0" val5="5"/>
+    </firstMerge>
+    <lastMerge>
+      <flag attr="-pairmerge"   val0="150.0" val1="0.0" val2="150.0" val3="150.0" val4="150.0" val5="0"/>
+      <flag attr="-Truncate" val0="0.0" val1="25" val2="20.0"/>
+      <flag attr="-TrimmedNoMerge" val0="0.0" val1="50.0"/>
+      <!--<flag attr="-SplitSegDup" val0="150.0" val1="12" val2="250.0" val3="20" val4="1.5" val5="180.0" val6="18" val7="5"/>-->
+      <!--<flag attr="-SplitSegDup_OneSided" val0="2" val1="400.0"/>-->
+      <!--<flag attr="-pairmergeHmap" val0="30.0" val2="6" val3="200" val4="2000"/>-->
+    </lastMerge>
+    <characterizeDefault>
+        <flag attr="-M"           val0="1" val1="3" val2="-Msave" val3="1"/>
+
+	<flag attr="-T"             val0="1e-14"/>
+	<flag attr="-A"             val0="10"/>
+	<flag attr="-S"             val0="0.1"/>
+	<flag attr="-L"             val0="60.0"/>
+        <flag attr="-outlier"     val0="3e-4"/>
+        <flag attr="-endoutlier"  val0="3e-2"/>   
+        <flag attr="-outlierBC"/>
+
+        <flag attr="-res"         val0="2.6"/>
+        <flag attr="-resSD"         val0="0.7"/>
+        <flag attr="-extend"      val0="1"/>
+        <flag attr="-nosplit"       val0="2"/>
+        <flag attr="-biaswt"        val0="0.2"/>
+	<flag attr="-biaswtEnd"     val0="0.0"/>
+	<flag attr="-biaswtOutlier" val0="0.0"/>
+        <flag attr="-deltaX"        val0="6"/>
+        <flag attr="-deltaY"        val0="6"/>
+	<flag attr="-PVres"      val0="2"/>
+        <flag attr="-PVendoutlier"/>
+
+        <flag attr="-hashgen" val0="5" val1="7" val2="2.4" val3="1.4" val4="0.05" val5="5.0" val6="1" val7="1" val8="1"/>
+	<flag attr="-hash" val00="-hashdelta" val01="26" val02="10" val03="46"/>
+        <flag attr="-hashoffset" val0="1"/>
+	<flag attr="-hashrange" val0="0"/>
+	<flag attr="-MultiMatchesTotScore" val1="2" val2="50.0"/>
+        <flag attr="-RefSplit"     val0="1e-4" val1="12" val2="1e-5"/>
+	<flag attr="-RefSplitStitch" val1="1"/>
+	<flag attr="-mres" val0="1e-3"/>
+	<flag attr="-hashGrouped" val0="5" val1="7"/>
+        <flag attr="-hashMultiMatch" val0="30"/>
+        <flag attr="-hashGC" val0="300"/>
+        <flag attr="-hashT2" val0="1"/>
+	<flag attr="-hashkeys" val0="1"/>
+        <flag attr="-HSDrange"   val0="1.0"/>
+        <flag attr="-insertThreads" val0="4"/>
+
+	<flag attr="-ScaleDelta" val1="0.05" val2="2" val3="-ScaleDeltaBPP"/>
+	<flag attr="-hashScaleDelta" val1="2"/>
+
+        <flag attr="-xmapchim"     val0="14" val1="2000.0"/>
+        <flag attr="-xmapUnique"    val0="14"/>
+	<flag attr="-xmaplen"/>
+	<flag attr="-AlignRes"      val0="2.0"/>
+        <flag attr="-outlierExtend" val0="6" val1="120"/>
+	<flag attr="-Kmax"          val0="4"/>
+	<flag attr="-rres"       val0="0.9"/>
+	<flag attr="-resEstimate"/>
+
+        <!--<flag attr="-MultiMatches" val0="7"/>-->
+        <flag attr="-MultiMatchesDelta" val0="50.0"/>
+	<flag attr="-MultiMatchesFilter" val0="2"/>
+
+	<flag attr="-outlierLambda" val0="10.0"/>
+	<flag attr="-outlierType1" val="0"/>
+
+        <flag attr="-FP"          val0="0.2"/>
+        <flag attr="-FN"          val0="0.02"/>
+        <flag attr="-sf"          val0="0.1"/>
+        <flag attr="-sd"          val0="0.0"/> 
+        <flag attr="-sr"          val0="0.02"/> 
+        <flag attr="-se"          val0="0.2"/> 
+        <flag attr="-MinSF"   val0="0.05"/>
+        <flag attr="-MaxSF"   val0="0.1"/>
+	<flag attr="-MinSD"   val0="0.0"/>
+	<flag attr="-MaxSD"   val0="0.0"/>
+        <flag attr="-MaxSR"   val0="0.02"/>
+        <flag attr="-MaxSE"   val0="0.5"/>
+	
+        <flag attr="-indel"/>
+
+	<flag attr="-finalsort-sitesdec"/>
+	<flag attr="-RAmem" val0="3" val1="300"/>
+
+        <flag attr="-f"/>   
+	<include val0="largeNodeMem"/>
+    </characterizeDefault>
+    <characterizeFinal>
+        <include val0="characterizeDefault"/>
+	<flag attr="-ScaleDelta" val1="0.05" val2="8" val3="-ScaleDeltaBPP"/>
+	<flag attr="-hashScaleDelta" val1="2"/>
+	<!--<flag attr="-BestRef"   val0="1"/>-->
+	<!--<flag attr="-BestRefPV"   val0="1"/>-->
+        <!--<flag attr="-MultiMatches" val0="0"/>-->
+    </characterizeFinal>
+    <alignmolCommon>
+        <flag attr="-nosplit"    val0="2"/>
+        <flag attr="-biaswt"        val0="0.0"/>
+	<flag attr="-biaswtEnd"     val0="0.0"/>
+	<flag attr="-biaswtOutlier" val0="0.0"/>
+
+        <flag attr="-res"        val0="3.1"/>
+        <flag attr="-resSD"      val0="0.75"/>
+
+        <flag attr="-extend"     val0="1"/>
+        <flag attr="-BestRef"    val0="1"/>
+        <flag attr="-BestRefPV"    val0="1"/>
+        <flag attr="-maptype" val0="0"/>
+
+	<flag attr="-PVres"      val0="2"/>
+        <flag attr="-PVendoutlier"/>
+	<flag attr="-AlignRes" val0="1.5"/>
+
+	<flag attr="-hashrange" val1="1"/>
+        <flag attr="-HSDrange" val0="1.0"/>
+        <flag attr="-hashoffset" val0="1"/>
+        <flag attr="-hashMultiMatch" val0="30" val1="5"/>
+	<flag attr="-insertThreads" val0="1"/>
+
+	<flag attr="-finalsort-sitesdec"/>
+	<flag attr="-RAmem" val0="3" val1="300"/>
+
+        <flag attr="-f"/>
+        <include val0="postAutonoise"/>
+    </alignmolCommon>
+    <alignmol>
+        <!-- will use noise0 -->
+	<include val0="extendRefine"/>
+        <include val0="alignmolCommon"/>
+	<flag attr="-indel" val0="-indelends"/>
+        <flag attr="-A"             val0="8"/>
+        <flag attr="-L"             val0="80"/>
+	<flag attr="-S"             val0="0"/>
+
+        <flag attr="-BestRef"    val0="0"/>
+        <flag attr="-BestRefWT"    val0="1"/>
+	<flag attr="-AddFragsWT"   val0="1"/>
+	<flag attr="-MultiMatches" val0="0"/>
+	<flag attr="-refineMinWT" val0="0.02"/>
+	<flag attr="-hashdelta" val1="15" val2="10" val3="25"/>
+	<flag attr="-outlierType0" val="1"/>
+        <flag attr="-LRbias"          val0="1e0"/>
+
+        <flag attr="-MinMapwt" val0="0.2" val1="0.2"/>
+	<flag attr="-XMAPmapWT" val0="1"/>
+
+	<flag attr="-nostat"/>
+        <flag attr="-biaswt"        val0="0.7"/>
+
+        <flag attr="-deltaX"        val0="4"/>
+        <flag attr="-deltaY"        val0="6"/>
+        <!--<flag attr="-RepeatMask"    val0="5" val1="0.01" display="Repeat Mask P-values" group="Final Refinement" default0="2" default1="0.01"/>-->
+        <!--<flag attr="-RepeatRec" val0="0.7" val1="0.6" val2="1.4"/>-->
+
+	<flag attr="-Hash_Bits" val0="23"/>
+
+	<flag attr="-hashgen" val00="5" val01="4" val02="2.4" val03="1.4" val04="0.05" val05="5.0" val06="1" val07="1" val08="2"/>
+	<flag attr="-hash" val0="-mres" val1="0.9"/>
+        <flag attr="-hashGC" val0="300"/>
+        <flag attr="-hashT2" val0="1"/>
+	<flag attr="-hashdelta" val1="14" val2="10" val3="24"/>
+
+        <flag attr="-MaxSE"   val0="0.5"/>
+        <flag attr="-outlier"       val0="1e-2" display="Min Outliers P-value" group="Second Refinement" default0="1e-5"/>
+	<flag attr="-outlierLambda" val0="20."/>
+        <flag attr="-endoutlier"    val0="1e-3" display="Molecule Ends P-value Cutoff" group="Second Refinement" default0="1e-4"/>
+	<flag attr="-maxEnd" val0="90."/>
+
+	<flag attr="-Kmax" val0="3"/>
+
+	<include val0="largeNodeBigMem"/>
+    </alignmol>
+    <alignmolvref>
+        <!-- will use noise0 -->
+        <flag attr="-T"          val0="1e-12"/>
+        <flag attr="-A"             val0="9"/>
+        <flag attr="-L"             val0="80"/>
+        <flag attr="-S"          val0="-1000"/>
+        <include val0="alignmolCommon"/>
+        <flag attr="-outlier"    val0="0.0001"/>
+        <flag attr="-endoutlier" val0="0.0001"/>
+        <flag attr="-sf"           val0="0.25"/>
+        <flag attr="-sd"           val0="0.11"/>
+        <flag attr="-minsites"     val0="9"/>
+
+        <flag attr="-hashgen" val00="5" val01="4" val02="2.4" val03="1.4" val04="0.05" val05="5.0" val06="1" val07="1" val08="2"/>
+	<flag attr="-hash" val00="-hashdelta" val01="14" val02="10" val03="24" val04="-mres" val05="0.9"/>
+        <flag attr="-hashGC" val0="300"/>
+        <flag attr="-hashT2" val0="1"/>
+        <flag attr="-insertThreads" val0="4"/>
+
+	<flag attr="-XMAPmapWT" val0="1"/>
+
+        <flag attr="-rres"          val0="0.9"/>
+	<include val0="largeNodeMem"/>
+    </alignmolvref>
+    <svdetect>
+        <!--<use comment="Note: noise parameters will be replaced by characterize results"/>-->
+        <flag attr="-sv"         val0="3"/>      
+        <flag attr="-FP"         val0="0.2"/>
+        <flag attr="-FN"         val0="0.01"/>
+        <flag attr="-sf"         val0="0.10"/>
+        <flag attr="-sd"         val0="0.0"/> 
+        <flag attr="-sr"         val0="0.01"/> 
+
+        <flag attr="-mres"       val0="1e-3"/>
+        <flag attr="-S"          val0="0.1"/>
+        <flag attr="-T"          val0="1e-13"/>
+	<flag attr="-indelMinConf" val1="13"/>
+        <flag attr="-A"          val0="8"/>
+        <flag attr="-L"          val0="60"/>
+
+	<flag attr="-RepeatMask"  val0="2" val1="0.01"/>
+        <flag attr="-RepeatRec" val0="0.6" val1="0.6" val2="1.4" val3="2" val4="0.9"/>
+
+        <flag attr="-hashgen" val0="5" val1="5" val2="2.4" val3="1.4" val4="0.05" val5="5.0" val6="1" val7="1" val8="2" val9="-hash"/>
+        <flag attr="-hashdelta" val1="26" val2="10" val3="46"/>
+        <flag attr="-hashoffset" val0="1"/>
+	<flag attr="-hashrange" val0="0"/>
+        <flag attr="-hashGC" val0="300"/>
+        <flag attr="-hashT2" val0="1"/>
+	<flag attr="-hashkeys" val0="1"/>
+	<flag attr="-hashGrouped" val0="5" val1="5"/>
+        <flag attr="-hashMultiMatch" val0="30"/>
+        <flag attr="-insertThreads" val0="4"/>
+        <flag attr="-nosplit"       val0="2"/>
+        <flag attr="-indel"/>
+        <flag attr="-outlierBC"/>
+        <flag attr="-outlierExtend" val0="12" val1="120"/>
+        <flag attr="-f"/>
+        <flag attr="-AlignRes"   val0="2.5"/>
+        <flag attr="-ErrDist"   val0="2.0"/>
+        <flag attr="-HSDrange" val0="2.0" val1="0.8"/>
+        <flag attr="-Kmax"          val0="4"/>
+        <flag attr="-MaxSE"   val0="0.5"/>
+        <flag attr="-MinSF"   val0="0.05"/>
+	<flag attr="-MinSR"   val0="0.01"/>
+	<flag attr="-MinFP"   val0="0.05"/>
+	<flag attr="-MinFN"   val0="0.005"/>
+	<flag attr="-MinSD_Mult" val0="0.5"/>
+        <flag attr="-MultiMatches" val0="5" val1="1e-3" val2="0.1" val3="4" val4="10.0"/>
+        <flag attr="-MultiMatchesDelta" val0="50.0"/>
+	<flag attr="-MultiMatchesFilter" val0="2"/>
+        <flag attr="-endoutlier" val0="3e-2"/>
+        <flag attr="-outlier" val0="3e-4"/>
+	<flag attr="-CutFlip" val0="3" val1="0.2" val2="1" val3="10" val4="1e-2" val5="-9.9" val6="1e-3" val7="-9.9" val8="3"/>
+	<flag attr="-CutFlipMerge" val0="1e-6"/>
+        <flag attr="-InversionNormalPV" val1="1e-10"/>
+	<flag attr="-OverlapFilter" val1="0.7" val2="2.0" val3="0.50"/>
+        <flag attr="-InversionOverlapFilter" val1="0.7" val2="15.0" val3="0.50"/>
+	<flag attr="-CutFlipSkip" val1="30"/>
+	<flag attr="-CutFlipFilter" val1="0.50" val2="0.50" val3="0.99" val4="5.0"/>
+	<flag attr="-MergeMG" val1="500"/>
+	<flag attr="-CutFlipBC" val1="1"/>
+	<flag attr="-MultiMatchesRev" val1="1"/>
+	<flag attr="-RefSplitStitch" val1="1"/>
+	<flag attr="-SmallDupFilter" val1="0.2" val2="0.8" val3="0.2" val4="1e-3"/>
+	<flag attr="-CutFlipInvDup" val1="5" val2="0.5"/>
+	<flag attr="-svDupSplit" val1="3" val2="30" val3="3" val4="140" val5="5" val6="2"/>
+	<flag attr="-svInvDup_minRefOverlapFrac" val1="0.5"/>
+	<flag attr="-svDup_maxQryGapMult" val1="0.8"/>
+	<flag attr="-svDup_minRefOverlapSites" val1="3"/>
+	<flag attr="-MultiMatchesTotScore" val1="2" val2="12.0"/>
+	<flag attr="-svIndelConfBySize" val1="1"/>
+	<flag attr="-svSmallDelConfirm" val1="2.5"/>
+	<flag attr="-svInvDup_maxQryGapMult" val1="3.0"/>
+	<flag attr="-svInvDup_maxSpacing" val1="300.0"/>
+	<flag attr="-svDup_maxSpacing" val1="300.0"/>
+	<flag attr="-svPrimaryOrientation" val1="2.0"/>
+	<flag attr="-svGapOverlapRatio" val1="0.7"/>
+	<flag attr="-svIndelRangeExpand" val1="0.6" val2="1.6" val3="0.3" />
+	<flag attr="-svInv_TrimFrac" val0="0.2" val1="0.5"/>
+
+        <flag attr="-PVendoutlier"/>
+        <flag attr="-PVres"     val0="2"/>
+        <flag attr="-RefSplit"     val0="1e-4" val1="24" val2="1e-5"/>
+        <flag attr="-deltaX"        val0="12"/>
+        <flag attr="-deltaY"        val0="12"/>
+        <flag attr="-extend"      val0="1"/>
+        <flag attr="-resEstimate"/>
+        <flag attr="-rres"    val0="0.9"/>
+        <flag attr="-xmapUnique"    val0="5"/>
+	<flag attr="-indelNoOverlap" val1="3"/>
+        <flag attr="-xmapchim"     val0="14" val1="2000"/>
+        <flag attr="-xmaplen"/>
+        <flag attr="-outlierType1" val0="0"/>
+        <flag attr="-outlierLambda" val0="10"/>
+	<flag attr="-svSideMinLen" val0="20.0"/>
+        <flag attr="-biaswt"        val0="0.2"/>
+	<flag attr="-biaswtEnd"     val0="0.0"/>
+	<flag attr="-biaswtOutlier" val0="0.0"/>
+	<flag attr="-svAlignConfByLen" val0="0"/>
+
+        <flag attr="-svMinConf"    val0="1"/>
+	<flag attr="-svFreq" val0="1"/>
+	<flag attr="-svTransOrient" val0="1"/>
+	<flag attr="-svAlignConfByInterval" val0="0.7"/>
+
+	<flag attr="-finalsort-sitesdec"/>
+	<flag attr="-RAmem" val0="3" val1="300"/>
+
+	<include val0="largeNodeBigMem"/>
+    </svdetect>
+    <referenceSvdetect>
+        <flag attr="-mres"       val0="2.0"/>
+    </referenceSvdetect>
+    <imgDetection>
+        <flag attr="-a" val0="0"/>
+        <flag attr="-w" val0="2"/>
+        <flag attr="-A" val0="3"/>
+        <flag attr="-p" val0="4.8"/>
+        <flag attr="-s" val0="3.0"/>
+    </imgDetection>
+    <sampleChar>
+        <flag attr="-M" val0="3"/>
+        <flag attr="-S" val0="-100"/>
+	<flag attr="-biaswt" val0="0"/>
+        <flag attr="-T" val0="1e-7"/>
+        <flag attr="-res" val0="3.1"/>
+        <flag attr="-extend" val0="1"/>
+	<flag attr="-hashgen" val00="5" val01="4" val02="2.2" val03="1.2" val04="0.05" val05="3.0" val06="1" val07="1" val08="1"/>
+	<flag attr="-hash" val0="-mres" val1="0.9" val2="-nosplit" val3="2" val4="-hashdelta" val5="10" val6="10"/>
+	<flag attr="-insertThreads" val0="32" val1="-queryThreads" val2="24"/>
+    </sampleChar>
+    <lambdaFilter>
+        <flag attr="-minlen"    val0="40"/>
+        <flag attr="-maxlen"    val0="60"/>
+        <flag attr="-minsites"  val0="6"/>
+        <flag attr="-maxsites"  val0="10"/>
+        <flag attr="-mincount"  val0="10"/>
+    </lambdaFilter>
+    <mapLambda>
+        <flag attr="-M" val0="5"/>
+        <flag attr="-S" val0="-1"/>
+        <flag attr="-T" val0="1e-4"/>
+        <flag attr="-res" val0="3.1"/>
+        <flag attr="-extend" val0="1"/>
+    </mapLambda>   
+    <indelconfidence>
+      <!-- parameters for R script InDelConfidence.r -->
+      <flag attr="flankLength"    val0="5e4"/>
+      <flag attr="alpha"          val0="0.1"/>
+      <flag attr="beta"           val0="0.2"/>
+      <flag attr="quantileAcross" val0="0.95"/>
+      <flag attr="quantileFlanks" val0="0.05"/>
+      <flag attr="minNMol"        val0="10"/>
+    </indelconfidence>
+</moduleArgs>

@@ -1,0 +1,362 @@
+SlFM0002	'Piperidine'	Others
+SlFM0003	'Putrescine'	Polyamine
+SlFM0006	'trans-2-Hexenal'	Others
+SlFM0008	'2-Aminoisobutyric_acid'	Amino acid derivative
+SlFM0009	'Choline'	Vitamin
+SlFM0010	'gamma-Aminobutyric_acid'	Amino acid derivative
+SlFM0011	'Methional'	Others
+SlFM0013	'L-Serine'	Amino acid
+SlFM0014	'Histamine'	Others
+SlFM0015	'Uracil'	Nucleic acid
+SlFM0017	'L-Proline'	Amino acid
+SlFM0018	'Betaine'	Alkaloid
+SlFM0019	'L-Valine'	Amino acid
+SlFM0020	'Indole'	Others
+SlFM0022	'Homoserine'	Amino acid derivative
+SlFM0024	'L-Threonine'	Amino acid
+SlFM0027	'D-Threose'	Saccharides
+SlFM0028	'Benzamidine'	Others
+SlFM0030	'Cysteine'	Amino acid
+SlFM0031	'Benzoic acid'	Polyphenol
+SlFM0032	'Niacinamide'	Vitamin
+SlFM0036	'Nicotinic_acid'	Vitamin
+SlFM0040	'Pipecolinic_acid'	Others
+SlFM0041	'1-Amino-1-cyclopentanecarboxylic_acid'	Amino acid derivative
+SlFM0042	'Agmatine'	Polyamine
+SlFM0044	'6-Aminohexanoic_acid'	Amino acid derivative
+SlFM0045	'delta-Aminolevulinic_acid_hydrochloride'	Saccharides
+SlFM0046	'L-Leucine'	Amino acid
+SlFM0047	'L-Isoleucine'	Amino acid
+SlFM0048	'Ornithine'	Amino acid
+SlFM0049	'L-Asparagine'	Amino acid
+SlFM0052	'2-Methylenesuccinic_acid'	Polyphenol
+SlFM0054	'L-Aspartic_acid'	Amino acid
+SlFM0055	'D-(+)-Malic_acid'	Polyphenol
+SlFM0057	'S-Methyl-L-cysteine'	Amino acid derivative
+SlFM0060	'Adenine'	Nucleic acid derivative
+SlFM0062	'4-Aminobenzoic_acid'	Polyphenol
+SlFM0063	'Trigonelline'	Alkaloid
+SlFM0064	'Anthranilic_acid'	Amino acid derivative
+SlFM0066	'L-Tyramine'	Amino acid
+SlFM0069	'Salicylic_acid'	Polyphenol
+SlFM0070	'Urocanic_acid'	Others
+SlFM0071	'p-Nitroaniline'	Others
+SlFM0072	'6-Hydroxynicotinic_Acid'	Others
+SlFM0073	'4-Nitrophenol'	Others
+SlFM0076	'4-Methyl-5-thiazoleethanol'	Vitamin
+SlFM0078	'Spermidine'	Polyamine
+SlFM0079	'Acetylcholine'	Others
+SlFM0081	'Indole-3-carboxaldehyde'	Others
+SlFM0083	'L-Glutamine'	Amino acid
+SlFM0084	'L-Lysine'	Amino acid
+SlFM0085	'Coumarin'	Others
+SlFM0086	'2-Methylglutaric_acid'	Polyphenol
+SlFM0087	'DL-threo-beta-Methylaspartic_acid'	Amino acid derivative
+SlFM0088	'Glutamic_acid'	Amino acid
+SlFM0089	'O-Acetyl-L-serine'	Amino acid derivative
+SlFM0090	'Isatin'	Others
+SlFM0094	'trans-Cinnamic_acid'	Polyphenol
+SlFM0095	'L-Methionine'	Amino acid
+SlFM0096	'2-Phenylglycine'	Amino acid derivative
+SlFM0098	'Guanine'	Nucleic acid
+SlFM0099	'Acetaminophen'	Others
+SlFM0101	'Dopamine'	Others
+SlFM0103	'5-Hydroxysalicylic_acid'	Others
+SlFM0104	'3,4-Dihydroxybenzoic_acid'	Polyphenol
+SlFM0106	'L-Histidine'	Amino acid
+SlFM0114	'L-Tryptamine'	Amino acid
+SlFM0115	'O-Acetyl-L-homoserine_hydrochloride'	Others
+SlFM0116	'Indole-3-carboxylic_acid'	Others
+SlFM0117	'Carnitine'	Others
+SlFM0120	'Anabasine'	Alkaloid
+SlFM0123	'p-Coumaric_acid'	Polyphenol
+SlFM0124	'4-Coumaric_acid'	Polyphenol
+SlFM0129	'L-Phenylalanine'	Amino acid
+SlFM0136	'Pyridoxamine_dihydrochloride'	Vitamin derivative
+SlFM0138	'Pyridoxine'	Vitamin
+SlFM0139	'N-Acetyl-L-leucine'	Amino acid derivative
+SlFM0142	'cis-Aconitic_acid'	Polyphenol
+SlFM0143	'5-Methyltryptamine'	Amino acid derivative
+SlFM0144	'L-Arginine'	Amino acid
+SlFM0145	'N-Acetyl-DL-aspartic_acid'	Amino acid derivative
+SlFM0146	'(S)-(+)-2-(anilinomethyl)_pyrrolidine'	Others
+SlFM0148	'3-Hydroxy-4-methyl-3-carboxypentanoate'	Others
+SlFM0151	'Serotonin'	Amino acid derivative
+SlFM0154	'Coniferyl_aldehyde'	Polyphenol
+SlFM0155	'4-Hydroxy-3-methoxycinnamaldehyde'	Polyphenol
+SlFM0157	'Coniferyl_aldehyde'	Others
+SlFM0158	'D-beta-Homophenylalanine'	Amino acid derivative
+SlFM0159	'Glucosamine'	Others
+SlFM0160	'Theobromine'	Alkaloid
+SlFM0161	'Caffeic_acid'	Polyphenol
+SlFM0166	'3,4-Dihydroxycinnamic_acid'	Polyphenol
+SlFM0168	'L-Tyrosine'	Amino acid
+SlFM0170	'L-Methionine_sulfone'	Amino acid derivative
+SlFM0173	'5-Sulfanyl-1-pentanesulfonamide'	Others
+SlFM0176	'O-Phosphocholine'	Vitamin
+SlFM0178	'4-Pyridoxate'	Others
+SlFM0180	'4-Pyridoxic_acid'	Others
+SlFM0190	'Quinic_acid'	Polyphenol
+SlFM0191	'D-Glucuronic_acid'	Others
+SlFM0192	'4-Hydroxy-3-methoxycinnamic_acid'	Polyphenol
+SlFM0194	'Ferulic_acid'	Polyphenol
+SlFM0195	'D-Gluconic_acid'	Saccharides
+SlFM0197	'3,4-Dihydroxy-L-phenylalanine'	Amino acid derivative
+SlFM0198	'gamma-Dodecalactone'	Others
+SlFM0203	'Spermine'	Polyamine
+SlFM0206	'Sebacic_acid'	Fatty acid
+SlFM0207	'N-Acetyltryptamine'	Amino acid derivative
+SlFM0212	'IBA'	Phytohormone
+SlFM0213	'L-Tryptophan'	Amino acid
+SlFM0216	'Methoxy_indoleacetic_acid'	Phytohormone
+SlFM0217	'(+/-)-alpha-Lipoamide'	Others
+SlFM0220	'Sattabacin'	Others
+SlFM0222	'Chalcone'	Flavonoid
+SlFM0223	'Kynurenine'	Amino acid derivative
+SlFM0225	'N-p-hydroxybenxoylputrescine'	Polyamine
+SlFM0227	'JA'	Phytohormone
+SlFM0232	'Vanillactic_acid'	Others
+SlFM0234	'(+-)-Baclofen'	Others
+SlFM0236	'Lycoperodine'	Others
+SlFM0243	'N-p-Cinnamoylputrescine'	Polyamine
+SlFM0244	'Acetyl-serotonin'	Amino acid derivative
+SlFM0245	'D-Pantothenic_Acid'	Vitamin
+SlFM0248	'Pantothenic_acid'	Vitamin
+SlFM0249	'Thidiazuron'	Others
+SlFM0251	'8-Chlro-1-tetrahydronorharmanone'	Others
+SlFM0252	'N-Hydroxy-L-tryptophan'	Amino acid derivative
+SlFM0254	'L(+)-Cystathionine'	Amino acid derivative
+SlFM0255	'Sinapic_acid'	Polyphenol
+SlFM0259	'2'-Deoxycytidine'	Nucleic acid derivative
+SlFM0263	'D-Ribulose-5-phosphate'	Saccharides
+SlFM0267	'Cinnamoyl_choline'	Vitamin derivative
+SlFM0268	'N-p-Coumaroylputrescine'	Polyamine
+SlFM0274	'L-Cystine'	Amino acid
+SlFM0275	'L-Homocarnosine'	Amino acid
+SlFM0277	'Lumichrome'	Others
+SlFM0278	'Cytidine'	Nucleic acid
+SlFM0284	'Uridine'	Nucleic acid
+SlFM0295	'4-Coumaroylcholine'	Vitamin derivative
+SlFM0299	'N-Caffeoylputrescine'	Polyamine
+SlFM0302	'Muramic_acid'	Others
+SlFM0306	'2'-Deoxyadenosine_monohydrate'	Nucleic acid derivative
+SlFM0310	'Nicotinate_ribonucleoside'	Others
+SlFM0311	'5-Ethyl-2'-deoxyuridine'	Nucleic acid derivative
+SlFM0314	'5-Methylcytidine'	Nucleic acid derivative
+SlFM0323	'D-Mannose-6-phosphate'	Saccharides
+SlFM0324	'N-p-Cinnamoylagmatine'	Polyamine
+SlFM0328	'2-Amino-1,3,4-tetradecanetriol'	Others
+SlFM0334	'Thiamin'	Vitamin
+SlFM0336	'ABA'	Phytohormone
+SlFM0338	'N-Feruloylputrescine'	Polyamine
+SlFM0344	'Adenosine'	Nucleic acid derivative
+SlFM0346	'Homocystine'	Amino acid derivative
+SlFM0349	'Inosine'	Others
+SlFM0360	'Naringenin'	Flavonoid
+SlFM0371	'Saccharopine'	Amino acid derivative
+SlFM0373	'N-p-Coumaroylagmatine'	Polyamine
+SlFM0377	'4beta-Hydroxy-11-O-(2'-pyrolylcarboxy)epilupinine'	Alkaloid
+SlFM0378	'Punicic_acid'	Fatty acid
+SlFM0382	'N-_Feruloylcadaverine'	Polyamine
+SlFM0386	'N-(9H-Purin-6-ylcarbamoyl)threonine'	Nucleic acid derivative
+SlFM0388	'2'-O-methyladenosine'	Nucleic acid derivative
+SlFM0391	'1-Methyladenosine'	Nucleic acid derivative
+SlFM0392	'2-Methyladenosine'	Nucleic acid derivative
+SlFM0397	'N-Coumaroyltyramine'	Amino acid derivative
+SlFM0399	'Guanosine'	Nucleic acid
+SlFM0403	'Xanthosine'	Nucleic acid
+SlFM0404	'Nicotinic_acid-hexoside'	Polyphenol
+SlFM0412	'16-Hydroxy-hexadecanoic_acid'	Fatty acid
+SlFM0416	'IAA-Asp'	Phytohormone
+SlFM0421	'Catechin'	Flavonoid
+SlFM0425	'N-Caffeoylagmatine'	Polyamine
+SlFM0429	'9-Hydroxy-(10E,12Z,15Z)-octadecatrienoic_acid'	Fatty acid
+SlFM0430	'N-Sinapoylputrescine'	Polyamine
+SlFM0436	'5'-Deoxy-5'-(methylthio)adenosine'	Nucleic acid derivative
+SlFM0438	'2'-O-methylguanosine'	Nucleic acid derivative
+SlFM0441	'N2-Methylguanosine'	Nucleic acid
+SlFM0443	'MNA-hexoside'	Others
+SlFM0459	'Hesperetin'	Flavonoid
+SlFM0470	'IAA-Glu'	Phytohormone
+SlFM0476	'N-Feruloylagmatine'	Polyamine
+SlFM0488	'(-)-N-[3',4'-Dihydroxy-(E)-cinnamoyl]-L-glutamic_acid'	Amino acid derivative
+SlFM0489	'N-Acetylneuraminic_acid'	Others
+SlFM0495	'N2,_N2-Dimethylguanosine'	Nucleic acid derivative
+SlFM0502	'N-Feruloyltyramine'	Amino acid derivative
+SlFM0507	'4-Methylumbelliferyl_phenylphosphonate'	Others
+SlFM0509	'4-Hydroxysphinganine'	Others
+SlFM0516	'N-Feruloylspermidine'	Polyamine
+SlFM0523	'JA-Ile'	Phytohormone
+SlFM0533	'p-Coumaric_acid_4-O-hexoside'	Polyphenol
+SlFM0539	'N',_N''-Di-p-hydroxybenxoylputrescine'	Polyamine
+SlFM0555	'GA7-1'	Phytohormone
+SlFM0558	'2'-Deoxyadenosine-5'-monophosphate'	Nucleic acid derivative
+SlFM0559	'Pyridoxine_O-glucoside'	Vitamin
+SlFM0572	'N-Sinapoylagmatine'	Polyamine
+SlFM0577	'4-Coumaroylquinic_acid'	Polyphenol
+SlFM0583	'12OHJA-Ile-1'	Phytohormone
+SlFM0585	'Chinese_bittersweet_alkaloid_II'	Others
+SlFM0587	'Esculin'	Others
+SlFM0588	'Sinapoyl_malate'	Polyphenol
+SlFM0589	'Fructose_1,6-diphosphate'	Saccharides
+SlFM0592	'D-(+)-Trehalose'	Saccharides
+SlFM0594	'N',_N''-Di-p-hydroxybenxoylcadaverine'	Polyamine
+SlFM0600	'β-D-glucopyranosyl-caffeic_acid'	Polyphenol
+SlFM0601	'Coniferin'	Others
+SlFM0625	'Adenosine_3'-monophosphate'	Nucleic acid derivative
+SlFM0626	'Kinetin-9-riboside'	Nucleic acid derivative
+SlFM0631	'Tianshic_acid'	Fatty acid
+SlFM0633	'Inosine-5'-monophosphate'	Others
+SlFM0639	'trans-Zeatin-riboside'	Phytohormone
+SlFM0648	'Chlorogenic_acid'	Polyphenol
+SlFM0651	'4-O-Caffeoylquinic_acid'	Polyphenol
+SlFM0656	'Ferulic_acid_O-hexoside'	Polyphenol
+SlFM0672	'Sucrose'	Saccharides
+SlFM0675	'Rosmarinic_acid'	Others
+SlFM0686	'Guanosine_5'-monophosphate'	Nucleic acid derivative
+SlFM0696	'iP9G'	Others
+SlFM0707	'5-Feruloylquinic_acid'	Polyphenol
+SlFM0709	'4-O-Feruloylquinic_acid'	Polyphenol
+SlFM0716	'Sinapaldehyde_glucoside'	Polyphenol
+SlFM0737	'DIMBOA_glucoside'	Terpenoid
+SlFM0744	'(-)-Riboflavin'	Vitamin
+SlFM0748	'N',_N''-p-Coumaroyl,_p-cinnamoylcadaverine'	Polyamine
+SlFM0756	'N',_N''-Caffeoyl,_p-cinnamoylputrescine'	Polyamine
+SlFM0765	'trans-Zeatin_O-glucoside'	Phytohormone
+SlFM0777	'Succinyladenosine'	Nucleic acid derivative
+SlFM0778	'S-Adenosyl-L-homocysteine'	Amino acid derivative
+SlFM0782	'1-O-b-D-glucopyranosyl_sinapate'	Polyphenol
+SlFM0785	'Cholesterol'	Fatty acid
+SlFM0786	'1-O-b-D-glucopyranosyl_sinapate'	Polyphenol
+SlFM0788	'Roseoside'	Others
+SlFM0789	'Sinapic_acid-O-glucoside'	Polyphenol
+SlFM0793	'2'-Deoxycytidine-5'-diphosphate'	Nucleic acid derivative
+SlFM0794	'dUDP'	Nucleic acid derivative
+SlFM0834	'N',_N''-p-Cinnamoyl,_caffeoylcadaverine'	Polyamine
+SlFM0845	'S-Adenosyl-L-methionine'	Amino acid derivative
+SlFM0847	'Leucine_derivative'	Amino acid derivative
+SlFM0864	'Sinapoyl_O-hexoside'	Polyphenol
+SlFM0866	'Cytidine-5'-diphosphate'	Nucleic acid derivative
+SlFM0879	'Tuberonic_acid_hexoside'	Others
+SlFM0883	'E-3,4,5'-Trihydroxy-3'-glucopyranosylstilbene'	Others
+SlFM0890	'3-Hydroxy-glabrol'	Others
+SlFM0896	'1-Decanoyl-2-hydroxy-sn-glycero-3-phosphocholine'	Others
+SlFM0900	'Threonyl_carbamoyl_adenosine'	Nucleic acid derivative
+SlFM0901	'N',_N''-Dicaffeoylputrescine'	Polyamine
+SlFM0902	'Tomatidenol'	glycoalkaloid
+SlFM0911	'Tomatidine'	glycoalkaloid
+SlFM0914	'Apigeninidin_5-glucoside'	Flavonoid
+SlFM0919	'Isoliquiritin'	Others
+SlFM0928	'E-4,5'-Dihydroxy-3-methoxy-3'-glucopyranosylstilbene'	Others
+SlFM0944	'Abscisic_acid_glucose_ester_(ABA-GE)'	Phytohormone
+SlFM0948	'(2S,3R)-2-{[{9-[(2R,3R,4S,5R)-3,4-Dihydroxy-5-(hydroxymethyl)tetrahydro-2-furanyl]-9H-purin-6-yl}(methyl)carbamoyl]amino}-3-hydroxybutanoic_acid_(non-preferred_name)'	Nucleic acid derivative
+SlFM0949	'N',_N''-Caffeoyl,_feruloylputrescine'	Polyamine
+SlFM0959	'Hydroxytomatidenol'	glycoalkaloid
+SlFM0960	'Hydroxytomatidenol'	glycoalkaloid
+SlFM0964	'Hydroxytomatidine'	glycoalkaloid
+SlFM0967	'Heptamethoxyflavone'	Flavonoid
+SlFM0969	'Apigenin_7-O-glucoside'	Flavonoid
+SlFM0970	'Apigenin_5-O-glucoside'	Flavonoid
+SlFM0981	'Naringenin_7-O-glucoside'	Flavonoid
+SlFM0982	'Naringenin_C-hexoside'	Flavonoid
+SlFM1000	'N',_N''-Feruloyl,caffeoylcadaverine'	Polyamine
+SlFM1015	'Biochanin_A_7-O-glucoside'	Flavonoid
+SlFM1020	'Kaempferol_3-O-glucoside'	Flavonoid
+SlFM1021	'Luteolin_7-O-glucoside'	Flavonoid
+SlFM1027	'Eriodictyol-7-O-glucoside'	Flavonoid
+SlFM1061	'Riboflavin-5'-monophosphate'	Vitamin derivative
+SlFM1076	'Rhodomyrtone'	Others
+SlFM1100	'Quercetin-O-glucoside'	Flavonoid
+SlFM1107	'Taxifolin_O-glucoside'	Flavonoid
+SlFM1114	'N',_N''-Dicaffeoylspermidine'	Polyamine
+SlFM1122	'N',_N''-p-hydroxybenxoyl,sinapoylcadaverine'	Polyamine
+SlFM1135	'10-Formyl-THF'	Amino acid derivative
+SlFM1156	'Irisolidone_7-O-beta-d-glucoside'	Flavonoid
+SlFM1157	'3,7-Dimethoxykaempferol-C-glucoside'	Flavonoid
+SlFM1163	'Selgin_5-O-hexoside'	Flavonoid
+SlFM1178	'N',_N''-Feruloyl,caffeoylspermidine'	Polyamine
+SlFM1203	'N',_N'',N'''-Tri-p-hydroxybenxoylagmatine'	Polyamine
+SlFM1208	'Tricin_5-O-hexoside'	Flavonoid
+SlFM1209	'Tricin_7-O-hexoside'	Flavonoid
+SlFM1221	'N',_N''-Diferuloylspermidine'	Polyamine
+SlFM1251	'D-(+)-Cellotriose'	Saccharides
+SlFM1274	'tZROG'	Others
+SlFM1275	'DHZROG'	Others
+SlFM1279	'3,4-Dicaffeoylquinic_acids'	Polyphenol
+SlFM1290	'LPC(1-acyl_18:2)'	Fatty acid
+SlFM1294	'Naringenin_O-malonylhexoside'	Flavonoid
+SlFM1297	'N',_N'',N'''-Tri-p-cinnamoylagmatine'	Polyamine
+SlFM1312	'N',_N'',_N'''-p-hydroxybenxoyl,_p-cinnamoyl,_p-coumaroylagmatine'	Polyamine
+SlFM1320	'Phellodenol_H_O-hexoside'	Polyphenol
+SlFM1336	'Luteolin_O-malonylhexoside'	Flavonoid
+SlFM1345	'Eriodictyol_O-malonylhexoside'	Flavonoid
+SlFM1362	'N',_N'',_N'''-Di-p-coumaroyl,_p-hydroxybenxoylagmatine'	Polyamine
+SlFM1375	'N',_N'',_N'''-Di-p-hydroxybenxoyl,_feruloylagmatine'	Polyamine
+SlFM1384	'Quercetin_O-malonylhexoside'	Flavonoid
+SlFM1385	'Tricetin_O-malonylhexoside'	Flavonoid
+SlFM1417	'Tomatidine-O-rhamnoside'	glycoalkaloid
+SlFM1419	'Selgin_O-malonylhexoside'	Flavonoid
+SlFM1422	'Viscumamide'	Others
+SlFM1441	'Tomatidenol-O-hexoside'	glycoalkaloid
+SlFM1442	'δ-tomatine'	glycoalkaloid
+SlFM1443	'Coumaroyl_tomatidine'	glycoalkaloid
+SlFM1449	'C-pentosyl-luteolin_O-hexoside'	Flavonoid
+SlFM1468	'Tomatidine_derivative'	glycoalkaloid
+SlFM1470	'Cyanidin_3-rutinoside'	Anthocyanin
+SlFM1472	'Dihydroxy_tomatidine-O-rhamnoside_derivative'	glycoalkaloid
+SlFM1473	'Kaempferol_3-O-glucoside-2'-O-rhamnoside'	Flavonoid
+SlFM1504	'Rutin'	Flavonoid
+SlFM1506	'Dihydroxy_tomatidine-O-hexoside_derivative'	glycoalkaloid
+SlFM1507	'C-hexosyl-tricetin_O-pentoside'	Flavonoid
+SlFM1541	'Isorhamnetin_rutinose_or_hexose-deoxyhexose'	Flavonoid
+SlFM1542	'Petunidin_3-O-rutinoside'	Anthocyanin
+SlFM1550	'Quercetin-3,4'-O-di-beta-glucopyranoside'	Flavonoid
+SlFM1553	'N',_N'',_N'''-Di-p-coumaroyl,_sinapoylagmatine'	Polyamine
+SlFM1607	'Acetyl_hydroxy_tomatidine-O-hexoside'	glycoalkaloid
+SlFM1617	'N',_N'',N'''-Triferuloylagmatine'	Polyamine
+SlFM1619	'N',_N'',_N'''-Diferuloyl,_caffeoylspermidine'	Polyamine
+SlFM1621	'N',_N'',_N'''-p-hydroxybenxoyl,caffeoyl,_feruloylagmatine'	Polyamine
+SlFM1625	'beta-Nicotinamide_adenine_dinucleotide'	Others
+SlFM1678	'N',_N'',_N'''-Disinapoyl,_p-coumaroylagmatine'	Polyamine
+SlFM1741	'Tomatidine-O-hexosyl-O-pentoside'	glycoalkaloid
+SlFM1769	'Dihydroxy_tomatidine-O-rhamnoside-O-pentoside'	glycoalkaloid
+SlFM1785	'γ-tomatine'	glycoalkaloid
+SlFM1794	'Quercetin-3-pentosylhexoside-7-deoxyhexoside'	Flavonoid
+SlFM1795	'Dihydroxy_tomatidine-O-hexosyl-O-pentoside'	glycoalkaloid
+SlFM1804	'Dihydroxy_tomatidine-O-hexosyl-O-rhamnoside'	glycoalkaloid
+SlFM1806	'C-hexosyl-apigenin_O-hexosyl-O-hexoside'	Flavonoid
+SlFM1809	'Kaempferol-dihexoside-rhamnoside'	Flavonoid
+SlFM1826	'Delphinidin_3-sophoroside-5-rhamnoside'	Anthocyanin
+SlFM1885	'Acetyl_hydroxy_tomatidine-di-O-hexoside'	glycoalkaloid
+SlFM1887	'Acetyl_hydroxy_tomatidine-di-O-hexoside'	glycoalkaloid
+SlFM1892	'N',_N'',N'''-Trisinapoylspermine'	Polyamine
+SlFM1923	'β2-tomatidine'	glycoalkaloid
+SlFM1942	'Kaempferol-ferulyglucosyl-xylosylrhamnoside'	Flavonoid
+SlFM1947	'Quercetin_O-dihexoside-rhamnosyl-xyloside'	Flavonoid
+SlFM1950	'Hydroxytomatidenol-tri-O-hexoside'	glycoalkaloid
+SlFM1952	'Ferulylpelargonidin_di-O-hexosyl-O-pentoside'	Anthocyanin
+SlFM1955	'Kaempferol-sinapylglucosyl-xylosylrhamnoside'	Flavonoid
+SlFM1977	'Dehydrotomatine_isomer_(25R)'	glycoalkaloid
+SlFM1978	'Dehydrotomatine'	glycoalkaloid
+SlFM1979	'Dehydrofilotomatine'	glycoalkaloid
+SlFM1980	'Habrochaitoside_A'	glycoalkaloid
+SlFM1981	'α-tomatine'	glycoalkaloid
+SlFM1982	'Filotomatine'	glycoalkaloid
+SlFM1983	'Neorickiioside_A'	glycoalkaloid
+SlFM1984	'Lycoperoside_H'	glycoalkaloid
+SlFM1985	'Neorickiioside_B'	glycoalkaloid
+SlFM1986	'Caffeoyl_hydroxy_tomatidine-di-O-hexosyl-O-pentoside'	glycoalkaloid
+SlFM1987	'Lycoperoside_B'	glycoalkaloid
+SlFM1988	'Lycoperoside_C'	glycoalkaloid
+SlFM1989	'Lycoperoside_A'	glycoalkaloid
+SlFM1990	'(Lycoperoside_H)_FA_or_(Hydroxy-α-Tomatine)_FA_III'	glycoalkaloid
+SlFM1991	'(Lycoperoside_H)_FA_or_(Hydroxy-α-Tomatine)_FA_I'	glycoalkaloid
+SlFM1992	'(Lycoperoside_H)_FA_or_(Hydroxy-α-Tomatine)_FA_II'	glycoalkaloid
+SlFM1993	'Esculeoside_A_lacking_O27_glucosyl_residue'	glycoalkaloid
+SlFM1994	'Caffeoyl_hydroxy_tomatidine-tri-O-hexosyl-O-pentoside'	glycoalkaloid
+SlFM1995	'Esculeoside_B'	glycoalkaloid
+SlFM1996	'Dehydrolycoperoside_G,_Dehydrolycoperoside_F_or_Dehydroescoleoside_A'	glycoalkaloid
+SlFM1997	'Dehydrolycoperoside_G,_Dehydrolycoperoside_F_or_Dehydroescoleoside_A'	glycoalkaloid
+SlFM1998	'Esculeoside_A'	glycoalkaloid
+SlFM1999	'Lycoperoside_F'	glycoalkaloid
+SlFM2000	'Lycoperoside_F-1'	glycoalkaloid
