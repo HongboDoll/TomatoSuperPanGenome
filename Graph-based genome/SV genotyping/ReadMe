@@ -1,0 +1,3 @@
+### Here contains the pipeline of population-scale SV genotyping and merging among the investigated samples
+
+run genotyped SV merge.sh to initiate this process
