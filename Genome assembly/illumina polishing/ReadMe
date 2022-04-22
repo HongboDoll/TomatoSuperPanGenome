@@ -1,0 +1,3 @@
+### Here lists the pipeline of genome polishing for the preliminary PacBio CLR-based assemblies
+
+run pilon.sh to run Pilon for correcting and polishing base pair-level errors of the raw assemblies
