@@ -2,7 +2,7 @@
 
 ### step 1
 
-run 01_hic-pro.sh to map raw Hi-C reads to the reference genome, performing a series of analyses to only retain valid read pairs. This step generate Hi-C contact matrix of given resolutions. The pipelines for plotting Hi-C heat maps are also included.
+run 01_hic-pro.sh to map raw Hi-C reads to the reference genome, performing a series of analyses to only retain valid read pairs. This step generates Hi-C contact matrix of given resolutions. The pipelines for plotting Hi-C heat maps are also included.
 
 ### step 2
 
