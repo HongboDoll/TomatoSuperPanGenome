@@ -1,0 +1,3 @@
+### Here lists the pipeline of reconstructing phylogenetic relationships using alignment of single-copy amino acid sequences
+
+run phylogeny.sh to initiate the process
