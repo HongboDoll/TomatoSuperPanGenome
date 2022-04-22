@@ -1,0 +1,3 @@
+### Here contains the pipeline and the related R script for mapping and visualzing of PacBio reads.
+
+run PacBio mapping.sh to run initiate the mapping process 
