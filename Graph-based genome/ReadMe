@@ -1,0 +1,3 @@
+### graph-based genome construction: pipelines and scripts used for integrating structural variant sequences and the linear genome into a graph-like structure
+
+### SV genotyping: pipelines and scripts used for mapping Illumina short reads to the graph-based genome, followed by population-scale SV genotyping.
