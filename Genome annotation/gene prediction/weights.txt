@@ -1,4 +1,4 @@
-PROTEIN	exonerate	5
+PROTEIN	GeMoMa	5
 TRANSCRIPT	assembler-test_pan_genome	10
 ABINITIO_PREDICTION	Augustus	1
 ABINITIO_PREDICTION	GeneScan	1
