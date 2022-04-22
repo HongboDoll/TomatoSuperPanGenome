@@ -1,0 +1,21 @@
+### Here contains pipelines and related scripts for prediction of protein-coding gene structure
+
+### step 1
+
+run 01_trinity_pasa.sh to assemble transcript using TRINITY under the de novo and genome-guided modes. The resulting transcripts were fed into PASA to generate a set of high-confidence transcript as the training set for ab initio gene prediction.
+
+### step 2
+
+run 02_denovo_prediction.sh to perform gene prediction using Genscan, Augustus and GlimmerHMM, in the light of corresponding trained prediction parameters. This step generates gene models, which are largely over-predicted.
+
+### step 3
+
+run 03_transcriptome.sh to align transcriptomic reads to the reference genome in a splice fashion. Transcripts are assembled and expression-based prediction of gene models are also performed. This step generates the evidence of transcript alignment.
+
+### step 4
+
+run 04_homology.sh to perform alignment of proteins from Arabidopsis thaliana, Oryza sativa, Solanum lycopersicum and Solanum tuberosum, which also produced predicted gene models. The alignment is considered as the homology-based evidence.
+
+### step 5
+
+run 05_evm.sh to integrate the abovementioned gene models and evidence to synthesize the final gene models, following the weight defined in the weights.txt
