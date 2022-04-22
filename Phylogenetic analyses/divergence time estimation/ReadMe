@@ -1,0 +1,3 @@
+### Here contains the pipeline of estimating species divergence time based on topology and protein alignment
+
+run divergence time.sh to perform the estimation using the PAML software package
