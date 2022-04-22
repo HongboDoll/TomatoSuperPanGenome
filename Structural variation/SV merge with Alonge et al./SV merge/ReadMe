@@ -1,0 +1,3 @@
+### Here contains the pipeline of merge SVs from Alonge et al. and SVs identified in this study.
+
+run merge.sh to initiate the process
