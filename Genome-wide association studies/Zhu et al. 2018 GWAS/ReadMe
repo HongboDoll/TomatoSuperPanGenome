@@ -1,3 +1,5 @@
 ### Here contains the pipeline of GWAS, also including statistics of GWAS peaks.
 
 run GWAS.sh to call the GWAS pipeline
+
+run count GWAS peaks for Zhu et al.sh to summary the peak signals of each GWAS result
