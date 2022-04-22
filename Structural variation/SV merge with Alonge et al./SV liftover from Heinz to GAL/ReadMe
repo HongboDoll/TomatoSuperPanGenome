@@ -1,0 +1,5 @@
+### Here contains the pipeline of lifting over SVs from Alonge et al. (S. lycopersicum SL4.0 as the reference) to S. galapagense as the reference.
+
+run 01_align_sv_from_heinz_2_GAL.sh to align the flanking seqeuences of each SV to the S. galapagense reference genome
+
+run 02_convert_sv_coordinates.sh to convert the properly mapped SVs to the coordiante system of S. galapagense
