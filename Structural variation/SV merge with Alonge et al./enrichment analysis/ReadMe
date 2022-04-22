@@ -1,0 +1,3 @@
+### Here contains the pipeline of gene ontology functional enrichment of SV impacting genes.
+
+run go_enrichment.sh to load the R package topGO to perform this analysis
