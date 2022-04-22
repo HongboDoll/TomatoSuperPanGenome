@@ -1,0 +1,3 @@
+### Here lists the pipeline of contig assembly from raw PacBio long noisy reads
+
+run canu.sh to call CANU for genome assembly
