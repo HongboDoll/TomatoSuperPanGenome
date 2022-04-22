@@ -1,0 +1,3 @@
+### Here contains the pipeline of GWAS, including pre-processing of genotypes, generating co-variants and kinships and association tests.
+
+run GWAS.sh to call the GWAS pipeline
