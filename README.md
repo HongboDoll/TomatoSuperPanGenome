@@ -1,7 +1,8 @@
-# WildTomatoPanGenome
-Here, we sequence and de novo assemble chromosome-scale genomes of nine wild species and two cultivated accessions of tomato, and constructe a pan-genome, revealing phylogenetic relationships and structural variation among _Solanum_ section _Lycopersicon_.
+# TomatoSuperPanGenome
 
-# Contents
+Here, we sequence and de novo assemble chromosome-scale genomes of nine wild species and two cultivated accessions of tomato, and constructe a super-pangenome, revealing phylogenetic relationships and structural variation among _Solanum_ section _Lycopersicon_. Comparative analyses reveal extensive variation among the toamto wild species, empowering the identification of a wild-type allele presenting potential values for yield improvement in modern cultivated tomatoes.
+
+# Content
 
 Pipelines and relevant scripts for:
 
