@@ -1,0 +1,5 @@
+### Here contains the pipeline of merging SVs among samples
+
+run 01_INS DEL INV TRANS merge.sh to merge SVs in terms of insertions, deletions, inversions and translocation.
+
+run 02_CNV merge.sh to merge duplicatino type of SVs.
