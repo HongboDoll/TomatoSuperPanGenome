@@ -1,2 +1,3 @@
-# BUSCO evaluation
-# Run busco.sh
+### Here lists the pipeline of BUSCO evaluation for the assembly completeness in genic regions
+
+run busco.sh to call BUSCO 
