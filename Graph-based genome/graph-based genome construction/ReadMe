@@ -1,0 +1,3 @@
+### Here contains the pipeline of constructing graph-based genomes
+
+run graph genome construction.sh to call vg for this analysis
