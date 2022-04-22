@@ -1,0 +1,7 @@
+### Here contains the pipeline of identification of SVs, SNPs and InDels
+
+run 01_SyRI SV.sh to call SyRI to identify SVs from genome pair-wise alignments
+
+run 02_SVMU SV.sh to call SVMU to identify SVs from genome pair-wise alignments
+
+run 03_SNP INDEL.sh to extract SNPs and InDels from genome pair-wise alignments
