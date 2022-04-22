@@ -1,0 +1,3 @@
+### Here contains the pipline to run Bionano Solve pipeline for buliding scaffolds based on the optical map
+
+run bionano.sh to perform the analysis
