@@ -1,0 +1,3 @@
+### Here lists the pipeline of gene clustering and pan-genome construction
+
+run pan_genome.sh to perform Markov-based gene clustering and construction of pan-genome.
