@@ -1,0 +1,3 @@
+### Here contains the pipeline of GWAS, also including statistics of GWAS peaks.
+
+run GWAS.sh to call the GWAS pipeline
