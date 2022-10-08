@@ -2,6 +2,16 @@
 
 ref=S_galapagense.fa
 
+threads=40
+for i in TS-1 TS-2
+do
+        ./vg giraffe -t $threads -f ${i}_1.clean.fastq.gz -f ${i}_2.clean.fastq.gz -x tomato_PAV.xg -g tomato_PAV.gg -m tomato_PAV.min -d tomato_PAV.dist -H tomato_PAV.gbwt > ${i}.gam
+#
+        ./vg pack -t $threads -Q 5 -x  tomato_PAV.xg -g ${i}.gam -o ${i}.pack
+        ./vg call -t $threads -r tomato_PAV.snarls -k ${i}.pack  -s ${i} tomato_PAV.xg  > ${i}.vcf  #### no -v $vcf parameter, drastically reduce the memory cost
+done
+
+
 #ls vcf | while read i
 #do
 #    cat <(grep '#' vcf/$i) <(./filter_vcf_ad.py vcf/$i | grep -v '#') > vcf/${i}.filter
