@@ -6,7 +6,7 @@ Effective utilization of wild relatives is key to overcome challenges in genetic
 
 Pipelines and relevant scripts for:
 
-- Genome assembly
+- Genome assembly 
 - Genome annotation
 - Pan-genome
 - Phylogenetic analyses
