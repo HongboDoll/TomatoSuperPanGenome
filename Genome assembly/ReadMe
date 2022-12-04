@@ -1,9 +1,9 @@
-### pacbio assembly: pipelines for assembling contigs from PacBio noisy raw reads.
+### pacbio assembly: pipelines for assembling contigs from PacBio noisy raw reads. The input files are PacBio error-prone raw reads and the output are contig-level assemblies. 
 
-### illumina polishing: pipelines for correcting and polishing putative sequencing and errors of PacBio CLR-based assemblies.
+### illumina polishing: pipelines for correcting and polishing putative sequencing and errors of PacBio CLR-based assemblies. The input is PacBio assemblies and the output is polised assemblies.
 
-### bionano: pipelines to run the Bionano Solve pipeline for connecting the assembled contigs into scaffolds in the light of the optical maps.
+### bionano: pipelines to run the Bionano Solve pipeline for connecting the assembled contigs into scaffolds in the light of the optical maps. Use the polised assemblies as input and scaffolds will be outputed in the light of bionano maps.
 
-### hi-c integration: pipelines to order and orient contigs/scaffolds into chromosome-scale super-scaffolds leveraging the long-range chromatin interaction signals.
+### hi-c integration: pipelines to order and orient contigs/scaffolds into chromosome-scale super-scaffolds leveraging the long-range chromatin interaction signals. Input is contigs/scaffolds and output is chromosome-scale genomes.
 
-### PacBio mapping: pipelines to map PacBio long noisy reads to the reference genomes.
+### PacBio mapping: pipelines to map PacBio long noisy reads to the reference genomes. Input: PacBio reads and reference genomes, with output of mapping results in BAM format.
