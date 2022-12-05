@@ -1,7 +1,9 @@
 ### repeat annotation: pipelines and scripts for annotation of repetitive elements using both homolog and de novo strategies.
+
 The input is genome assemblies and the output will be statistics of annotated repeats.
 
 ### gene prediction: pipelines and scripts for prediction of protein-coding genes integrating de novo, homology-based and transcriptome-based strategies. 
+
 This is a complicated step. The inputs are: genome assembly sequences, raw RNA-seq reads, de novo gene prediction training models 
 (if applicable to the species, mostly no), and the output will be genome annotation file in the GFF3 format, 
 containing the position of introns, exons, UTRs (if any), CDS of each predicted protein-coding genes.
