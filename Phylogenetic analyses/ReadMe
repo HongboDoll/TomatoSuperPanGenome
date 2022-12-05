@@ -6,3 +6,5 @@ are then implemented to infer the phylogenetic relationships.
 
 ### divergence time estimation: pipelines and scripts used for estimating divergence time among the investigated species
 
+Estimation of divergence time is based on two dataset: one is the inferred phylogeny removing branch lengths and bootstarp values, the other is the alignment
+in PHYLIP format excluding any ambiguous positions (N). Fossile calibration points and root age constraint also need to be added to the tree. 
