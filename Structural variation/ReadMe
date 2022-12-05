@@ -1,5 +1,10 @@
 ### SV identification: pipelines and scripts used for calling SVs
 
+SV identification contains two section: one is SyRI-based method and the other is based on SVMU. Both take genome assemblies as intput and return identified
+potential SVs in the VCF format.
+
+This folder also contains the pipeline to identify SNPs and small InDels. These are extracted from the pair-wise genome alignment by the in-house script.
+
 ### SV merge among samples: pipelines and scripts used for mergeing SVs from different samples.
 
 ### SV merge with Alonge et al.: pipelines and scripts used for mergeing SVs identified in this study and those in Alonge et al 2020 Cell.
