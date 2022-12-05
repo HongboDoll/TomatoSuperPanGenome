@@ -1,3 +1,8 @@
 ### phylogeny reconstruction: pipelines and scripts used for building species topology and phylogeny
 
+To infer a species phylogeny, first prepare the amino-acid sequences of the used species (13 tomato and 1 potato here) and extract the single-copy orthologous
+genes among these species. Peptide sequences of these single-copy genes are then globally aligned to produce a PHYLIP format result. Maximum likelihood approaches
+are then implemented to infer the phylogenetic relationships.
+
 ### divergence time estimation: pipelines and scripts used for estimating divergence time among the investigated species
+
