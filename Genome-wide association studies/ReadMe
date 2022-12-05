@@ -1,3 +1,6 @@
 ### Tieman et al. 2017 GWAS: pipelines and scripts used for GWAS on the 32 flavor-related metabolits reported in Tieman et al. 2017
 
 ### Zhu et al. 2018 GWAS: pipelines and scripts used for GWAS on the 362 metabolits reported in Zhu et al. 2018
+
+The inputs are phenotypic data (content of fruit flavor compounds or metabolites) and genotypic data (SNPs or SVs genotyped in the tomato population).
+Output will be association level of each SNP or SV markder to each of these phenotypes.
