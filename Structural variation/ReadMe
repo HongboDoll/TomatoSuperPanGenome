@@ -7,4 +7,12 @@ This folder also contains the pipeline to identify SNPs and small InDels. These 
 
 ### SV merge among samples: pipelines and scripts used for mergeing SVs from different samples.
 
+To merge individual SV vcf to a multi-sample vcf, take these individual vcfs as input and output will be the merged one. This pipeline also contains methods
+to handle nearby SVs with highly similar inserted/deleted sequences.
+
 ### SV merge with Alonge et al.: pipelines and scripts used for mergeing SVs identified in this study and those in Alonge et al 2020 Cell.
+
+The frist section of this pipeline is for "lifting over" the SVs reported in Alonge et al. (based on SL4.0 reference) to the coordinate system of S. galapagense.
+It takes genomes of SL4.0 and S. galapagense, and the SV vcf from Alonge et al. as intput and will generate SV vcf based on the S. galapagense genome coordinates.
+
+The next part is merging the SVs identified in this study and those from Alonge et al. It requires both SV vcfs and reterun a combined vcf.
