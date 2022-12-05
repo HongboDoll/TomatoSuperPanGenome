@@ -1,8 +1,10 @@
 ### graph-based genome construction: pipelines and scripts used for integrating structural variant sequences and the linear genome into a graph-like structure
+
 To construct a graph-based genome (variation graph), one will need a linear reference genome (FASTA format) and genetic variants in the VCF format.
 The output will be the graph in vg/xg format with its indexes.
 
 ### SV genotyping: pipelines and scripts used for mapping Illumina short reads to the graph-based genome, followed by population-scale SV genotyping.
+
 SV genotyping is performed by mapping the NGS short reads of tomato populations to the constructed genome graph. Each of the SVs embeded in the graph will be 
 genotyped based on the graph alignments.
 The output will be VCF file for each of the population individuals containing SV genotype information.
