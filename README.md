@@ -16,7 +16,7 @@ Pipelines and relevant scripts for:
 
 # The website
 
-We have implemented a web-based database hosting the genoimc datsets and provide a series of user-friendly tools. Please  http://caastomato.biocloud.net/home for more details.
+We have implemented a web-based database hosting the genoimc datsets and provide a series of user-friendly tools. Please visit http://caastomato.biocloud.net/home for more details.
 
 # Citation
 
