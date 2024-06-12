@@ -22,7 +22,7 @@ We have implemented a web-based database hosting the genoimc datsets and provide
 
 Li, N., He, Q., Wang, J. et al. Super-pangenome analyses highlight genomic diversity and structural variation across wild and cultivated tomato species. Nat Genet 55, 852–860 (2023). https://doi.org/10.1038/s41588-023-01340-y
 
-
+The genomic data has also been deposited in https://github.com/HongboDoll/TomatoSuperPanGenome/releases, in the case you encounter problems accessing the website.
 
 # Contacts
 
